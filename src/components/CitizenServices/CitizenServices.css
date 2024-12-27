@@ -1,0 +1,35 @@
+.background-container {
+  background-image: url("../../assets/images/citizen-services/citizen-bg.png"); 
+  background-size: fill; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%; 
+}
+
+.heading-2 {
+  color: #0855a1;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.img-style{
+  width: 102px;
+  height: 102px;
+}
+
+.card1 {
+  background: #ffffff; 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card1:hover {
+  background: #fafafa; 
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card-title1 {
+  font-weight: 500;
+  font-size: 18px;
+}
