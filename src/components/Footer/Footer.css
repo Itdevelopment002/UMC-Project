@@ -46,7 +46,7 @@
     margin-bottom: 20px;
 }
 
-.d-flex {
+.contact-list .d-flex {
     display: flex;
     align-items: center;
     gap: 15px; 
