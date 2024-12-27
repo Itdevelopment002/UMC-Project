@@ -1,0 +1,593 @@
+/* General Styling */
+.navbar-container {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #EDEFF1;
+    padding: 0.31rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.helpline-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.helpline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.accessibility {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+
+
+.divider {
+    color: #ccc;
+}
+
+.text-size {
+    cursor: pointer;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.selected-language {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.flag-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+
+.custom-dropdown:hover .dropdown-options {
+    display: block;
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Banner Section Styling */
+.banner {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 114px;
+    margin-bottom: -25px;
+    padding: 0.31rem 3rem;
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+
+}
+
+.brand-name {
+    font-size: 24px;
+    color: #0b436a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.brand-subtitle {
+    font-size: 16px;
+    color: #0b436a;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.banner-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-img1 {
+    width: 299px;
+    height: 114px;
+    object-fit: cover;
+
+}
+
+.banner-img2 {
+    width: 48px;
+    height: 46px;
+    object-fit: cover;
+}
+
+.banner-img3 {
+    width: 58px;
+    height: 48px;
+    object-fit: cover;
+
+}
+
+/* Navigation Menu Styling */
+.header-container {
+    width: 100%;
+    top: 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b436a;
+    z-index: 9999;
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.custom-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+    .toggle-btn {
+        display: none;
+    }
+
+    .custom-nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 13px 20px !important;
+        font-size: 15px !important;
+        font-weight: 500;
+        color: #fff !important;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background-color: #3ea4ed;
+        color: #fff;
+    }
+
+    .nav-link:hover {
+        background-color: #004080;
+    }
+}
+
+.social-icons {
+    padding: 0.31rem 3rem;
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.youtube-icon {
+    width: 17px;
+    height: 14px;
+}
+
+.twitter-icon {
+    width: 15px;
+    height: 14px;
+}
+
+.facebook-icon {
+    width: 9px;
+    height: 14px;
+}
+
+.insta-icon {
+    width: 17px;
+    height: 14px;
+}
+
+
+@media (max-width: 992px) {
+    .custom-nav {
+        display: none;
+        flex-direction: column;
+        background-color: transparent;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
+        list-style: none;
+        
+
+    }
+
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #0b436a; /* Attractive background */
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 300px;
+    }
+    
+    .nav-list li {
+        text-transform: uppercase;
+        letter-spacing:0.5px;
+        position: relative;
+        padding: 5px 20px 5px 15px; 
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
+    }
+    
+    .nav-list li:last-child {
+        border-bottom: none; /* Remove divider for the last item */
+    }
+    
+    .nav-list li::before {
+        position: absolute;
+        left: 10px; /* Adjust positioning */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7); /* Subtle arrow color */
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+    /* .nav-list li:hover {
+        background-color: #ffffff; 
+    }
+    
+    .nav-list li:active {
+        color: #8a2f2f; 
+    } */
+    
+    
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 10px !important;
+        font-size: 13px !important;
+        font-weight: 500;
+        color: #fff !important;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background-color: #0f3a65;
+        color: #fff;
+    } */
+
+    .nav-link:hover {
+        color: rgba(255, 255, 255, 0.7) !important;
+        transform: scale(0.95); /* Adjust the scale value as needed */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+    
+
+    .nav-visible {
+        margin-top: -5px;
+        display: flex;
+        animation: slideInLeft 0.5s ease-in-out;
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    .nav-hidden {
+        animation: slideOutLeft 0.3s ease-in-out;
+    }
+    
+    @keyframes slideOutLeft {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    
+    
+
+    .toggle-btn {
+        display: block;
+        background: none;
+        padding: 8px 20px !important;
+        border: none;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+}
+
+/* HEADER TOP CSS FOR BELOW 768px  */
+@media (max-width: 768px) {
+    .helpline {
+        font-size: 11px !important;
+        gap: 5px;
+
+    }
+
+    .top-bar {
+        padding: 0.31rem 1rem;
+    }
+
+    .accessibility {
+        gap: 5px;
+        font-size: 11px !important;
+    }
+
+    .banner {
+        padding: 0.31rem 1rem;
+        height: 100px;
+    }
+
+    .logo {
+        margin-top: 5px;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-name {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .brand-subtitle {
+        font-size: 14px;
+        margin-top: -3px;
+    }
+
+    .banner-img1 {
+        margin-top: 0px;
+    }
+
+    .banner-img2 {
+        display: none;
+    }
+
+    .banner-img3 {
+        display: none;
+    }
+    .toggle-btn {
+        font-size: 24px;
+        margin-left: 25px;
+    }
+    .social-icons {
+        padding: 0.31rem 2rem;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+/* HEADER TOP CSS FOR BELOW 768px  */
+@media (max-width: 576px) {
+    .helpline {
+        display: none;
+    }
+
+    .accessibility {
+        margin: 0 auto;
+        gap: 8px;
+        font-size: 11px !important;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar {
+        justify-content: center; /* Center content horizontally */
+        padding: 0.31rem 1rem;
+
+    }
+
+    .banner {
+        padding: 0.31rem 1rem;
+        height: 100px;
+    }
+
+    .logo {
+        margin-top: 5px;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-name {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .brand-subtitle {
+        font-size: 14px;
+        margin-top: -3px;
+    }
+
+    .banner-img1 {
+        display: none;
+    }
+
+    .banner-img2 {
+        margin-top: -20px;
+        display: block;
+    }
+
+    .banner-img3 {
+        margin-top: -20px;
+        display: block;
+    }
+
+    .toggle-btn {
+        font-size: 24px;
+        margin-left: 25px;
+    }
+    .social-icons {
+        padding: 0.31rem 2rem;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 448px) {
+   
+    .top-bar {
+        padding: 0.31rem 0.5rem;
+    }
+
+    .accessibility {
+        gap: 3px;
+        font-size: 10px !important;
+        justify-content: center !important;
+    }
+
+    .selected-language {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+    }
+
+    .flag-icon {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+
+    .banner {
+        padding: 0.31rem 0.5rem;
+        height: 90px;
+    }
+
+    .logo {
+        margin-top: 0px;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-name {
+        margin-top: 5px;
+        font-size: 17px;
+    }
+
+    .brand-subtitle {
+        font-size: 12px;
+        margin-top: -3px;
+    }
+
+    .banner-img2 {
+        display: none;
+    }
+    .banner-img3 {
+        width: 48px;
+        height: 38px;
+        margin-top: -20px;
+        display: block;
+    }
+
+    .toggle-btn {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    .social-icons {
+        padding: 0.31rem 1rem;
+        display: flex;
+        gap: 15px;
+    }
+    
+}
