@@ -1,35 +1,35 @@
-/* Add a background image with styling */
-.container {
-    background-image: url('../../assets/images/citizen-bg.png'); /* Replace with your image path */
-    background-size: fill; /* Make the image cover the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    padding: 40px;
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-  }
-  
-  .card {
-    background: #ffffff; /* Ensure cards have a solid background */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-body i {
-    color: inherit;
-  }
-  
-  .card-title {
-    font-weight: bold;
-    color: #333333;
-  }
-  
-  /* Custom color for the purple text */
-  .text-purple {
-    color: #6f42c1;
-  }
-  
+.background-container {
+  background-image: url("../../assets/images/citizen-services/citizen-bg.png"); 
+  background-size: fill; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%; 
+}
+
+.heading-2 {
+  color: #0855a1;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.img-style{
+  width: 102px;
+  height: 102px;
+}
+
+.card1 {
+  background: #ffffff; 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card1:hover {
+  background: #fafafa; 
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card-title1 {
+  font-weight: 500;
+  font-size: 18px;
+}
