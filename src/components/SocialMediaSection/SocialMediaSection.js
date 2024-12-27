@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import "./SocialMediaSection.css";
 
 const SocialMediaSection = () => {
   return (
-    <div className="container" id="social-media-section">
+    <div className="container-fluid" id="social-media-section">
       <h2 className="my-2 media-title">Connect with us</h2>
       <div className="row g-3">
         <div className="col-md-4">
@@ -17,8 +18,6 @@ const SocialMediaSection = () => {
                 width="100%"
                 height="400"
                 className="facebook-section"
-                scrolling="no"
-                frameBorder="0"
                 allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               ></iframe>
