@@ -34,7 +34,6 @@ const GalleryAndCommunication = () => {
                   <a
                     href={image}
                     className="glightbox"
-                    data-glightbox={`title: Gallery ${index + 1}`}
                   >
                     <img
                       src={image}
