@@ -1,15 +1,14 @@
 import './App.css';
-import CitizenServices from './components/CitizenServices/CitizenServices';
-import GalleryAndCommunication from './components/GalleryAndCommunication/GalleryAndCommunication';
+
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
-
+import Home from './components/Home/Home';
 function App() {
   return (
     <>
       <Header />
-      <CitizenServices />
-      <GalleryAndCommunication />
+      <Home/>
+     
       <Footer/>
     </>
   );
