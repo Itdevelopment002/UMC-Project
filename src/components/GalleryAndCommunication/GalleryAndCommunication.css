@@ -4,6 +4,10 @@
   object-fit: cover; 
 }
 
+.font-fam{
+  font-family: 'Inter', sans-serif; 
+}
+
 .image-style-com-2 {
     height: 62px;
     width: 62px; 
