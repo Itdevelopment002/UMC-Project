@@ -8,7 +8,7 @@ import Location from "../../assets/images/Location.png"
 const Footer = () => {
     return (
         <footer className="footer" id="footer">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row ">
                     <div className="col-lg-5 col-md-6 mb-4">
                         <div className="footer-logo-section">
