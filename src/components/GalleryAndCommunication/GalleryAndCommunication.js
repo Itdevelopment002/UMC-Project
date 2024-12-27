@@ -22,7 +22,7 @@ const GalleryAndCommunication = () => {
   }, []);
 
   return (
-    <div className="container font-fam mt-4 mb-4">
+    <div className="container-fluid font-fam mt-4 mb-4">
       <div className="row">
         {/* Gallery Section */}
         <div className="col-lg-8">

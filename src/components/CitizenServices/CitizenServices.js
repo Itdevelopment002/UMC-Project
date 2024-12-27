@@ -43,11 +43,11 @@ const CitizenServices = () => {
 
   return (
     <div className="background-container">
-      <div className="container py-4">
+      <div className="container-fluid py-4">
         <h2 className="mb-4 heading-2">Citizen Services</h2>
         <div className="row">
           {services.map((service, index) => (
-            <div className="col-lg-2 col-md-4 col-sm-6 my-2" key={index}>
+            <div className=" col-6 col-lg-2 col-md-4 col-sm-6 my-2" key={index}>
               <div className="card card1 h-100 text-center border-0 rounded">
                 <div className="card-body">
                   <img
