@@ -22,7 +22,7 @@ const SocialMedia = () => {
   }, []);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" id="social-media-section">
       <div className="row d-flex justify-content-around">
         <div className="col-md-4 col-sm-6 media-plugin">
           <div className="card-header fb text-white text-center">
