@@ -68,6 +68,7 @@
   border-color: #3498db transparent transparent transparent; /* Blue triangle */
 }
 
+
 @media (max-width: 448px) {
 
   .image-style-com-2{
@@ -85,7 +86,12 @@
   .image-style-2 {
     height: 100px;
   }
-  .image-style-com-2{
-    
-  }
+
 }
+@media (max-width: 992px) {
+  .citizen-communication-div {
+    margin-top: 20px;
+  }
+
+}
+

@@ -47,7 +47,7 @@ const GalleryAndCommunication = () => {
           </div>
         </div>
 
-        <div className="col-lg-4">
+        <div className="col-lg-4 citizen-communication-div">
           <h4 className="h4-styling">Citizens Communication</h4>
           <div className="card card-2 px-3 py-3 border-0" style={{ background: "#EAFCFF" }}>
             <div className="mb-3">

@@ -23,8 +23,10 @@ const SocialMedia = () => {
 
   return (
     <div className="container-fluid" id="social-media-section">
-      <div className="row d-flex justify-content-around">
-        <div className="col-md-4 col-sm-6 media-plugin">
+      <h4 className="h4-styling-new">Connect With Us</h4>
+
+      <div className="row d-flex justify-content-around social-media-border">
+        <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header fb text-white text-center">
             <i className="fab fa-facebook-f me-2"></i>Facebook
           </div>
@@ -44,7 +46,7 @@ const SocialMedia = () => {
         </div>
 
         {/* Twitter Section */}
-        <div className="col-md-4 col-sm-6 media-plugin">
+        <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white tw text-center">
             <i className="fab fa-twitter me-2"></i>Twitter
           </div>
@@ -70,7 +72,7 @@ const SocialMedia = () => {
         </div>
 
         {/* YouTube Section */}
-        <div className="col-md-4 col-sm-6 media-plugin">
+        <div className="col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white you text-center">
             <i className="fab fa-youtube me-2"></i>YouTube
           </div>
