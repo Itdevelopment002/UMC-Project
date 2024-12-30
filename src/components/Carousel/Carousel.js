@@ -20,7 +20,6 @@ const settings = {
 };
 
 const Corousel = () => {
-  // Local image data
   const sliders = [
     { id: 1, image: image1 },
     { id: 2, image: image2 },

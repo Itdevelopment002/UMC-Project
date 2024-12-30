@@ -1,83 +1,80 @@
 .update-section {
-    margin-top: 40px;
-    padding: 10px 0; 
-    overflow: hidden; 
-    position: relative; 
-    white-space: nowrap;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd; 
+  margin-top: 40px;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
 }
 
 .marquee {
-    display: flex; 
-    overflow: hidden; 
-    position: relative; 
-    height: 50px;
-    align-items: center;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  align-items: center;
 }
 
-
-
 .marquee {
-    display: flex; 
-    height: 50px;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
-    background: #ffffff;
-    color: #333;
-    position: relative;
-    font-weight: 500;
-    font-size: 16px;
-    font-family: 'Inter';
-    line-height: 3em;
-    border-radius: 8px;
-    box-shadow: 6px 6px 10px #d7d7d7;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #333;
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Inter";
+  line-height: 3em;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px #d7d7d7;
 }
 
 .marquee:before {
-    content: "Current Updates";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background: #3ea4ed;
-    color: #fff;
-    z-index: 1;
-    padding: 0 1.5em;
+  content: "Current Updates";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #3ea4ed;
+  color: #fff;
+  z-index: 1;
+  padding: 0 1.5em;
 }
 
 .marquee-item {
-    padding: 0 20px; 
-    font-size: 15px; 
-    font-family: 'Inter';
-    line-height: 50px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-family: "Inter";
+  line-height: 50px;
 }
 .marquee-content {
-    margin-left: 100%;
-    display: flex; 
-    animation: marquee 45s linear infinite;
+  margin-left: 100%;
+  display: flex;
+  animation: marquee 45s linear infinite;
 }
 
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
-  
-  @media (max-width: 499px) {
-    .update-section {
-        margin-top: -60px;
-        
-    }
-    .marquee{
-        font-size: 13px;
-        height: 40px;
-    }
-    .marquee-item {
-        padding: 0 20px; 
-        font-size: 12px; 
-    }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 499px) {
+  .update-section {
+    margin-top: -60px;
+  }
+  .marquee {
+    font-size: 13px;
+    height: 40px;
+  }
+  .marquee-item {
+    padding: 0 20px;
+    font-size: 12px;
+  }
 }

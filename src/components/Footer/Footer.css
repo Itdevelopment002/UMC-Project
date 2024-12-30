@@ -1,145 +1,141 @@
-
-  .footer{
-    background-color: #093158;
-    color: #ffffff;
-    padding: 40px 0;
-    font-family: 'Roboto', sans-serif;
+.footer {
+  background-color: #093158;
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: "Roboto", sans-serif;
 }
 
-#footer-section .footer-logo-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-#footer-section .footer-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-#footer-section .footer-title {
-    font-family: 'Rowdies', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
+.footer-title {
+  font-family: "Rowdies", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
 }
 
-#footer-section .footer-subtitle {
-    font-family: 'Ramabhadra', sans-serif;
-    font-size: 16px;
-    color: #ffffff;
-    margin: 0;
+.footer-subtitle {
+  font-family: "Ramabhadra", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
 }
 
-#footer-section .contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-#footer-section .contact-list li {
-    margin-bottom: 20px;
+.contact-list li {
+  margin-bottom: 20px;
 }
 
-#footer-section .contact-list .d-flex {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
+.contact-list .d-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-
-
-#footer-section .contact-text {
-    line-height: 1.4;
+.contact-text {
+  line-height: 1.4;
 }
 
-#footer-section .contact-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-    color: #ffffff; 
+.contact-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
 }
 
-#footer-section .contact-detail {
-    font-size: 14px;
-    margin: 0;
-    color: #A3A4A7; 
+.contact-detail {
+  font-size: 14px;
+  margin: 0;
+  color: #a3a4a7;
 }
 
 @media (max-width: 768px) {
-    #footer-section .icon-img {
-        width: 24px;
-        height: 24px;
-    }
-    #footer-section .contact-title,
-    #footer-section .contact-detail {
-        font-size: 12px;
-    }
+  .icon-img {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-title,
+  .contact-detail {
+    font-size: 12px;
+  }
 }
 
-
-#footer-section .footer-heading {
-    font-family: "Poppins", serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #48AAF0;
-    margin-bottom: 15px;
+.footer-heading {
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #48aaf0;
+  margin-bottom: 15px;
 }
 
-#footer-section .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-#footer-section .footer-links li {
-    margin-bottom: 8px;
+.footer-links li {
+  margin-bottom: 8px;
 }
 
-#footer-section .footer-links a {
-    font-family: "Poppins", serif;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.3s;
+.footer-links a {
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  transition: color 0.3s;
 }
 
-#footer-section .footer-links a:hover {
-    color: #00bcd4;
+.footer-links a:hover {
+  color: #00bcd4;
 }
 
-#footer-section .footer-divider {
-    border: 0.5px solid #ffffff;
-    margin: 20px 0;
+.footer-divider {
+  border: 0.5px solid #ffffff;
+  margin: 20px 0;
 }
 
-#footer-section .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 14px;
-    color: #dcdcdc;
-    gap: 10px;
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #dcdcdc;
+  gap: 10px;
+  text-align: center;
+}
+
+.footer-bottom span {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-section {
+    flex-direction: column;
     text-align: center;
-}
+  }
 
-#footer-section .footer-bottom span {
-    flex: 1;
-}
-
-@media (max-width: 768px) {
-    #footer-section .footer-logo-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #footer-section .footer-bottom {
-        flex-direction: column;
-        gap: 5px;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
 }

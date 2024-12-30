@@ -15,35 +15,34 @@
 
 .logo-slide {
   display: flex;
-  justify-content: center; /* Centering images */
+  justify-content: center;
   align-items: center;
-  padding: 10px; /* Adds padding to separate the logos */
+  padding: 10px;
 }
 
 .client-logo-slider img {
   width: 100%;
-  max-width: 170px; /* Ensure the logos aren't too large */
+  max-width: 170px;
   height: auto;
   border: 1px solid #ddd;
-  background-color: #F6F6F5;
+  background-color: #f6f6f5;
   border-radius: 10px;
   object-fit: contain;
-  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 .client-logo-slider img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
 
 .slick-slide img {
   display: block;
   width: 100%;
-  max-width: 170px; /* Ensure the images don't stretch */
+  max-width: 170px;
   height: 150px;
   object-fit: contain;
 }
 
-/* Custom arrows */
 .custom-arrow {
   background: none;
   border: none;
@@ -64,16 +63,15 @@
   left: -30px;
 }
 
-/* Responsive styles */
 @media (max-width: 1200px) {
   .logo-slide {
-    padding: 10px; /* Adjust padding for larger screens */
+    padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
   .slick-slide img {
-    max-width: 150px; /* Adjust logo size for smaller screens */
+    max-width: 150px;
   }
 }
 
@@ -81,11 +79,11 @@
   .slick-slide img {
     display: block;
     width: 100%;
-    max-width: 100px; /* Ensure the images don't stretch */
+    max-width: 100px;
     height: 100px;
     object-fit: contain;
   }
   .slick-slide img {
-    max-width: 120px; /* Smaller size for very small screens */
+    max-width: 120px;
   }
 }

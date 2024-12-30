@@ -8,7 +8,10 @@ const CurrentUpdate = () => {
     { description: "Manual News 2: Our services are now expanded globally." },
     { description: "Manual News 3: Big savings on our premium plans." },
     { description: "Manual News 4: Join our upcoming webinar on technology." },
-    { description: "Manual News 5: Exciting offers available for a limited time!" },
+    {
+      description:
+        "Manual News 5: Exciting offers available for a limited time!",
+    },
   ];
 
   const handleMouseEnter = () => {
@@ -18,10 +21,12 @@ const CurrentUpdate = () => {
 
     let translateX = 0;
     if (transform !== "none") {
-      const matrix = transform.match(/matrix\((.+)\)/) || transform.match(/matrix3d\((.+)\)/);
+      const matrix =
+        transform.match(/matrix\((.+)\)/) ||
+        transform.match(/matrix3d\((.+)\)/);
       if (matrix) {
         const values = matrix[1].split(", ");
-        translateX = parseFloat(values[4]); // Extract the `translateX` value
+        translateX = parseFloat(values[4]);
       }
     }
 
