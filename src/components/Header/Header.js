@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import phoneicon from '../../assets/images/header-img/Rectangle 41106.png'
 import flag1 from '../../assets/images/header-img/united-states.png'
 import flag2 from '../../assets/images/header-img/india.png'
+import flag3 from '../../assets/images/header-img/hindu.png'
 import Mainlogo from '../../assets/images/header-img/logo 1.png'
 import Headlogo1 from '../../assets/images/header-img/headerlogo1.png'
 import Headlogo2 from '../../assets/images/header-img/Hindi_logo 1.png'
@@ -12,8 +13,6 @@ import headicon1 from '../../assets/images/header-img/Symbol (1).png'
 import headicon2 from '../../assets/images/header-img/Symbol (2).png'
 import headicon3 from '../../assets/images/header-img/Symbol (3).png'
 import headicon4 from '../../assets/images/header-img/Symbol.png'
-
-
 
 
 
@@ -26,9 +25,45 @@ const Navbar = () => {
         setIsNavCollapsed(!isNavCollapsed);
     };
 
-    const handleLanguageChange = (value) => {
-        setSelectedLanguage(value);
-        // Add logic here if you want to perform actions on language change
+    useEffect(() => {
+        if (
+            !document.querySelector(
+                'script[src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"]'
+            )
+        ) {
+            const googleTranslateScript = document.createElement('script');
+            googleTranslateScript.src =
+                '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(googleTranslateScript);
+        }
+
+        window.googleTranslateElementInit = () => {
+            if (!document.getElementById('google_translate_element').childNodes.length) {
+                new window.google.translate.TranslateElement(
+                    {
+                        pageLanguage: 'en',
+                        includedLanguages: 'en,hi,mr', // Include Hindi and Marathi
+                        layout: window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+                    },
+                    'google_translate_element'
+                );
+            }
+        };
+    }, []);
+
+    const handleLanguageChange = (language) => {
+        setSelectedLanguage(language);
+        const googleTranslateDropdown = document.querySelector('.goog-te-combo');
+        if (googleTranslateDropdown) {
+            googleTranslateDropdown.value = language === 'eng' ? 'en' : language === 'hin' ? 'hi' : 'mr'; // English, Hindi, Marathi
+            googleTranslateDropdown.dispatchEvent(new Event('change'));
+        }
+    };
+
+    const [activeLink, setActiveLink] = useState("Home");
+
+    const handleNavClick = (linkName) => {
+        setActiveLink(linkName);
     };
 
     return (
@@ -54,10 +89,12 @@ const Navbar = () => {
                         <div className="selected-language">
                             {selectedLanguage === 'eng' ? (
                                 <img src={flag1} alt="English" className="flag-icon" />
-                            ) : (
+                            ) : selectedLanguage === 'hin' ? (
                                 <img src={flag2} alt="Hindi" className="flag-icon" />
+                            ) : (
+                                <img src={flag3} alt="Marathi" className="flag-icon" />
                             )}
-                            {selectedLanguage === 'eng' ? 'English' : 'हिंदी'}
+                            {selectedLanguage === 'eng' ? 'English' : selectedLanguage === 'hin' ? 'हिंदी' : 'मराठी'}
                         </div>
                         <div className="dropdown-options">
                             <div
@@ -74,8 +111,19 @@ const Navbar = () => {
                                 <img src={flag2} alt="Hindi" className="flag-icon" />
                                 हिंदी
                             </div>
+                            <div
+                                className="dropdown-option"
+                                onClick={() => handleLanguageChange('mar')}
+                            >
+                                <img src={flag3} alt="Marathi" className="flag-icon" />
+                                मराठी
+                            </div>
                         </div>
                     </div>
+                    <div
+                      id="google_translate_element"
+                      style={{ display: "none" }}
+                    ></div>
                 </div>
             </div>
 
@@ -127,47 +175,124 @@ const Navbar = () => {
                     {/* Navigation Menu */}
                     <nav className={`custom-nav ${isNavCollapsed ? 'nav-hidden' : 'nav-visible'}`}>
                         <ul className="nav-list mb-0 px-4">
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link active">Home</Link>
+                            <li className={`nav-item ${activeLink === "Home" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Home" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Home")}
+                                >
+                                    Home
+                                </Link>
+                            </li>
+
+                            <span className="nav-divider"></span>
+
+                            <li className={`nav-item ${activeLink === "About UMC" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "About UMC" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("About UMC")}
+                                >
+                                    About UMC
+                                </Link>
+                            </li>
+
+                            <span className="nav-divider"></span>
+
+                            <li className={`nav-item ${activeLink === "Administrative Wings" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Administrative Wings" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Administrative Wings")}
+                                >
+                                    Administrative Wings
+                                </Link>
+                            </li>
+
+                            <span className="nav-divider"></span>
+
+                            <li className={`nav-item ${activeLink === "Corporation" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Corporation" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Corporation")}
+                                >
+                                    Corporation
+                                </Link>
                             </li>
                             <span className="nav-divider"></span>
 
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">About UMC</Link>
+                            <li className={`nav-item ${activeLink === "Departments" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Departments" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Departments")}
+                                >
+                                    Departments
+                                </Link>
                             </li>
+
                             <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Administrative Wings</Link>
+
+                            <li className={`nav-item ${activeLink === "Circulars" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Circulars" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Circulars")}
+                                >
+                                    Circulars
+                                </Link>
                             </li>
+
                             <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Corporation</Link>
+
+                            <li className={`nav-item ${activeLink === "Online Services" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Online Services" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Online Services")}
+                                >
+                                    Online Services
+                                </Link>
                             </li>
+
                             <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Departments</Link>
+
+                            <li className={`nav-item ${activeLink === "RTS Act 2015" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "RTS Act 2015" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("RTS Act 2015")}
+                                >
+                                    RTS Act 2015
+                                </Link>
                             </li>
+
                             <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Circulars</Link>
+
+                            <li className={`nav-item ${activeLink === "Gallery" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Gallery" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Gallery")}
+                                >
+                                    Gallery
+                                </Link>
                             </li>
+
                             <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Online Services</Link>
+
+                            <li className={`nav-item ${activeLink === "Contact Us" ? "active" : ""}`}>
+                                <Link
+                                    to="#."
+                                    className={`nav-link ${activeLink === "Contact Us" ? "active" : ""}`}
+                                    onClick={() => handleNavClick("Contact Us")}
+                                >
+                                    Contact Us
+                                </Link>
                             </li>
-                            <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">RTS Act 2015</Link>
-                            </li>
-                            <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link px-3">Gallery</Link>
-                            </li>
-                            <span className="nav-divider"></span>
-                            <li className="nav-item">
-                                <Link to="#." className="nav-link">Contact Us</Link>
-                            </li>   
-                            
+
+
                         </ul>
                     </nav>
 

@@ -21,13 +21,13 @@ const Footer = () => {
             </div>
             <ul className="contact-list">
               <li>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-start">
                   <img
                     src={Phone}
                     alt="Phone Icon"
                     className="icon-img"
-                    width="29"
-                    height="24"
+                    width="20"
+                    height="20"
                   />
                   <div className="contact-text">
                     <p className="contact-title">Phone</p>
@@ -36,13 +36,13 @@ const Footer = () => {
                 </div>
               </li>
               <li>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-start">
                   <img
                     src={Email}
                     alt="Email Icon"
                     className="icon-img"
-                    width="29"
-                    height="24"
+                    width="20"
+                    height="20"
                   />
                   <div className="contact-text">
                     <p className="contact-title">Email</p>
@@ -56,8 +56,8 @@ const Footer = () => {
                     src={Location}
                     alt="Location Icon"
                     className="icon-img"
-                    width="29"
-                    height="24"
+                    width="18"
+                    height="18"
                   />
                   <div className="contact-text">
                     <p className="contact-title">Address</p>
