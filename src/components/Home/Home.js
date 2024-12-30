@@ -21,8 +21,8 @@ const Home = () => {
     <EServices />
      <CitizenServices />
      <GalleryAndCommunication />
+     <SocialMediaSection/>
      <BottomSlider />
-     {/* <SocialMediaSection/> */}
      <Footer />
     </>
   )
