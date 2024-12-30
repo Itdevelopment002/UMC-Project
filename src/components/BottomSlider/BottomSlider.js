@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import './BottomSlider.css';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./BottomSlider.css";
+import { Link } from "react-router-dom";
 
-// Importing images
 import logo1 from "../../assets/images/bottom-slider/logo1.png";
 import logo2 from "../../assets/images/bottom-slider/logo2.png";
 import logo3 from "../../assets/images/bottom-slider/logo3.png";
@@ -32,20 +32,19 @@ const PrevArrow = (props) => {
 };
 
 const BottomSlider = () => {
-  // Using imported images in an array
   const logos = [
-    { src: logo1, alt: 'Logo 1', link: 'https://example1.com' },
-    { src: logo2, alt: 'Logo 2', link: 'https://example2.com' },
-    { src: logo3, alt: 'Logo 3', link: 'https://example3.com' },
-    { src: logo4, alt: 'Logo 4', link: 'https://example4.com' },
-    { src: logo5, alt: 'Logo 5', link: 'https://example5.com' },
-    { src: logo6, alt: 'Logo 6', link: 'https://example6.com' },
-    { src: logo1, alt: 'Logo 1', link: 'https://example1.com' },
-    { src: logo2, alt: 'Logo 2', link: 'https://example2.com' },
-    { src: logo3, alt: 'Logo 3', link: 'https://example3.com' },
-    { src: logo4, alt: 'Logo 4', link: 'https://example4.com' },
-    { src: logo5, alt: 'Logo 5', link: 'https://example5.com' },
-    { src: logo6, alt: 'Logo 6', link: 'https://example6.com' },
+    { src: logo1, alt: "Logo 1", link: "https://example1.com" },
+    { src: logo2, alt: "Logo 2", link: "https://example2.com" },
+    { src: logo3, alt: "Logo 3", link: "https://example3.com" },
+    { src: logo4, alt: "Logo 4", link: "https://example4.com" },
+    { src: logo5, alt: "Logo 5", link: "https://example5.com" },
+    { src: logo6, alt: "Logo 6", link: "https://example6.com" },
+    { src: logo1, alt: "Logo 1", link: "https://example1.com" },
+    { src: logo2, alt: "Logo 2", link: "https://example2.com" },
+    { src: logo3, alt: "Logo 3", link: "https://example3.com" },
+    { src: logo4, alt: "Logo 4", link: "https://example4.com" },
+    { src: logo5, alt: "Logo 5", link: "https://example5.com" },
+    { src: logo6, alt: "Logo 6", link: "https://example6.com" },
   ];
 
   const settings = {
@@ -87,7 +86,7 @@ const BottomSlider = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          className: 'slider-padding',
+          className: "slider-padding",
         },
       },
     ],
@@ -100,9 +99,9 @@ const BottomSlider = () => {
           <Slider {...settings}>
             {logos.map((logo, index) => (
               <div key={index} className="logo-slide">
-                <a href={logo.link} target="_blank" rel="noopener noreferrer">
+                <Link to={logo.link} target="_blank" rel="noopener noreferrer">
                   <img src={logo.src} alt={logo.alt} />
-                </a>
+                </Link>
               </div>
             ))}
           </Slider>

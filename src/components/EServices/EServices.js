@@ -2,7 +2,6 @@ import React from "react";
 import "./EServices.css";
 
 const EServices = () => {
-  // Data arrays for each section
   const eServicesList = [
     "Property Tax",
     "Birth Certificate",
@@ -32,7 +31,6 @@ const EServices = () => {
       <div className="row">
         <div className="col-md-8">
           <div className="accordion" id="accordionExample">
-            {/* e-Services Accordion */}
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingOne">
                 <button
@@ -55,13 +53,15 @@ const EServices = () => {
               >
                 <div className="accordion-body">
                   {eServicesList.map((service, index) => (
-                    <span key={index}>{service}{index < eServicesList.length - 1 && " | "}</span>
+                    <span key={index}>
+                      {service}
+                      {index < eServicesList.length - 1 && " | "}
+                    </span>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Information Accordion */}
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingTwo">
                 <button
@@ -85,7 +85,6 @@ const EServices = () => {
               </div>
             </div>
 
-            {/* Initiatives-Programme Accordion */}
             <div className="accordion-item font-class">
               <h2 className="accordion-header" id="headingThree">
                 <button
@@ -109,7 +108,6 @@ const EServices = () => {
               </div>
             </div>
 
-            {/* Election Accordion */}
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingFour">
                 <button
@@ -135,8 +133,6 @@ const EServices = () => {
           </div>
         </div>
 
-
-        {/* Right Section - UMC News */}
         <div className="col-md-4">
           <div className="card card4">
             <div className="card-body">
@@ -145,16 +141,15 @@ const EServices = () => {
               <div className="scroll-container">
                 <ul className="list-unstyled scrolling-list">
                   {newsList.map((news, index) => (
-                    <li key={index} className="news-item">{news}</li>
+                    <li key={index} className="news-item">
+                      {news}
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
           </div>
         </div>
-
-
-
       </div>
     </div>
   );

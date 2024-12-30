@@ -13,10 +13,7 @@ const SocialMedia = () => {
       }
     };
 
-    // Initial adjustment
     adjustFacebookWidth();
-
-    // Adjust on window resize
     window.addEventListener("resize", adjustFacebookWidth);
     return () => window.removeEventListener("resize", adjustFacebookWidth);
   }, []);

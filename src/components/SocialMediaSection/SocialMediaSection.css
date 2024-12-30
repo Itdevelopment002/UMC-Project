@@ -1,40 +1,40 @@
-#social-media-section{
+#social-media-section {
   margin-top: 30px !important;
   margin-bottom: 50px !important;
 }
-#social-media-section .media-plugin{
+#social-media-section .media-plugin {
   text-align: center;
 }
 
-#social-media-section .title-inner h2{
+#social-media-section .title-inner h2 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-#social-media-section iframe{
+#social-media-section iframe {
   border-radius: 0px 0px 8px 8px;
   border: 1px solid #e8eaed;
 }
 
-#social-media-section .card-header{
+#social-media-section .card-header {
   font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
 }
 
-#social-media-section .you{
+#social-media-section .you {
   background-color: #cc0808;
   font-family: "Poppins", serif;
   font-size: 18px;
 }
 
-#social-media-section .fb{
+#social-media-section .fb {
   background-color: #306ca9;
   font-family: "Poppins", serif;
   font-size: 18px;
 }
 
-#social-media-section .tw{
+#social-media-section .tw {
   background-color: #1a8cd8;
   font-family: "Poppins", serif;
   font-size: 18px;
@@ -43,37 +43,36 @@
 .h4-styling-new {
   position: relative;
   display: inline-block;
-  background-color: #3498db; /* Blue background */
-  color: #fff; /* White text color */
+  background-color: #3498db;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 7px 50px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   text-align: center;
-  margin-bottom: 15px ;
+  margin-bottom: 15px;
 }
 
 .h4-styling-new::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -10px; /* Position the triangle below the h4 */
+  bottom: -10px;
   left: 50%;
-  /* margin-bottom: 5px; */
   transform: translateX(-50%);
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 10px 10px 0 10px; /* Adjust triangle size */
-  border-color: #3498db transparent transparent transparent; /* Blue triangle */
+  border-width: 10px 10px 0 10px;
+  border-color: #3498db transparent transparent transparent;
 }
 
 @media (max-width: 576px) {
-  #social-media-section{
+  #social-media-section {
     margin-top: 30px !important;
     margin-bottom: 20px !important;
   }
-  #social-media-section .media-plugin{
+  #social-media-section .media-plugin {
     text-align: center;
     margin-bottom: 20px;
   }
@@ -89,11 +88,11 @@
 }
 
 @media (max-width: 992px) {
-  #social-media-section{
+  #social-media-section {
     margin-top: 30px !important;
     margin-bottom: 20px !important;
   }
-  #social-media-section .media-plugin{
+  #social-media-section .media-plugin {
     text-align: center;
     margin-bottom: 20px;
   }

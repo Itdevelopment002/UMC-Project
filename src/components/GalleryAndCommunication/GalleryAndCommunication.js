@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./GalleryAndCommunication.css";
 import img1 from "../../assets/images/Gallery/gallery-1.png";
 import img2 from "../../assets/images/Gallery/gallery-2.png";
@@ -15,7 +16,6 @@ const GalleryAndCommunication = () => {
   const galleryImages = [img1, img2, img3, img4, img5, img6];
 
   useEffect(() => {
-    // Initialize GLightbox
     GLightbox({
       selector: ".glightbox",
     });
@@ -24,23 +24,19 @@ const GalleryAndCommunication = () => {
   return (
     <div className="container-fluid font-fam mt-4 mb-4">
       <div className="row ">
-        {/* Gallery Section */}
         <div className="col-lg-8 ">
           <h4 className="h4-styling">Gallery</h4>
           <div className="row gallary-border">
             {galleryImages.map((image, index) => (
               <div className="col-6 col-sm-6 col-md-4 mb-3" key={index}>
                 <div className="card border-0">
-                  <a
-                    href={image}
-                    className="glightbox"
-                  >
+                  <Link to={image} className="glightbox">
                     <img
                       src={image}
                       alt={`Gallery ${index + 1}`}
                       className="image-style-2 rounded-2"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -49,7 +45,10 @@ const GalleryAndCommunication = () => {
 
         <div className="col-lg-4 citizen-communication-div">
           <h4 className="h4-styling">Citizens Communication</h4>
-          <div className="card card-2 px-3 py-3 border-0" style={{ background: "#EAFCFF" }}>
+          <div
+            className="card card-2 px-3 py-3 border-0"
+            style={{ background: "#EAFCFF" }}
+          >
             <div className="mb-3">
               <div className="d-flex align-items-center py-3 px-2">
                 <img

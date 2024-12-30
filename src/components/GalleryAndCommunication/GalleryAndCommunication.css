@@ -5,7 +5,7 @@
 }
 
 .font-fam {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .gallary-border {
@@ -14,7 +14,7 @@
   border: 1px solid #e8eaed;
   border-radius: 0px 5px 5px 5px;
   margin-left: 0.5px !important;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
   padding: 25px 0px 10px 0px;
 }
 
@@ -40,13 +40,11 @@
   font-weight: 500;
 }
 
-
-
 .h4-styling {
   position: relative;
   display: inline-block;
-  background-color: #3498db; /* Blue background */
-  color: #fff; /* White text color */
+  background-color: #3498db;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 7px 20px;
@@ -56,29 +54,27 @@
 }
 
 .h4-styling::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -10px; /* Position the triangle below the h4 */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 10px 10px 0 10px; /* Adjust triangle size */
-  border-color: #3498db transparent transparent transparent; /* Blue triangle */
+  border-width: 10px 10px 0 10px;
+  border-color: #3498db transparent transparent transparent;
 }
 
-
 @media (max-width: 448px) {
-
-  .image-style-com-2{
-    height:60px;
-    width:60px;
+  .image-style-com-2 {
+    height: 60px;
+    width: 60px;
   }
-  .h6-styling-gallery{
-    font-size:13px;
+  .h6-styling-gallery {
+    font-size: 13px;
   }
-  .text-styling-small{
+  .text-styling-small {
     font-size: 16px;
   }
 }
@@ -86,12 +82,9 @@
   .image-style-2 {
     height: 100px;
   }
-
 }
 @media (max-width: 992px) {
   .citizen-communication-div {
     margin-top: 20px;
   }
-
 }
-
