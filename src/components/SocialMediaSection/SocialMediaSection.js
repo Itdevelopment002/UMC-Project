@@ -4,7 +4,7 @@ import "./SocialMediaSection.css";
 
 const SocialMediaSection = () => {
   return (
-    <div className="container-fluid" id="social-media-section">
+    <div className="container-fluid mb-5" id="social-media-section">
       <h2 className="my-2 media-title">Connect with us</h2>
       <div className="row g-3">
         <div className="col-md-4">

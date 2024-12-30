@@ -65,7 +65,7 @@ const EServices = () => {
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingTwo">
                 <button
-                  className="accordion-button collapsed"
+                  className="accordion-button accordian-button-color collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -89,7 +89,7 @@ const EServices = () => {
             <div className="accordion-item font-class">
               <h2 className="accordion-header" id="headingThree">
                 <button
-                  className="accordion-button collapsed"
+                  className="accordion-button accordian-button-color collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -113,7 +113,7 @@ const EServices = () => {
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingFour">
                 <button
-                  className="accordion-button collapsed"
+                  className="accordion-button accordian-button-color collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
@@ -135,20 +135,26 @@ const EServices = () => {
           </div>
         </div>
 
+
         {/* Right Section - UMC News */}
         <div className="col-md-4">
-          <div className="card card4" style={{background: "#EAFCFF"}}>
+          <div className="card card4">
             <div className="card-body">
-            <div className="card-head">UMC News</div>
-            <hr />
-              <ul className="list-unstyled">
-                {newsList.map((news, index) => (
-                  <li key={index}>• {news}</li>
-                ))}
-              </ul>
+              <div className="card-head">UMC News</div>
+              <hr className="horizontal-line" />
+              <div className="scroll-container">
+                <ul className="list-unstyled scrolling-list">
+                  {newsList.map((news, index) => (
+                    <li key={index} className="news-item">{news}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+
+
+
       </div>
     </div>
   );

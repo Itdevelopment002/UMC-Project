@@ -1,52 +1,91 @@
-/* .slider {
+.client-logo-slider {
   display: flex;
-  transition: transform 0.5s linear; 
-}
-
-.slider-card {
-  min-width: 200px;
-  max-width: 200px;
-  margin: 0 10px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0; 
+  align-items: center;
+  margin: 20px auto;
 }
 
-.slider-card img {
-  max-width: 100%;
-  max-height: 100%;
+.content-box {
+  width: 100%;
+}
+
+.inner-box {
+  width: 100%;
+}
+
+.logo-slide {
+  display: flex;
+  justify-content: center; /* Centering images */
+  align-items: center;
+  padding: 10px; /* Adds padding to separate the logos */
+}
+
+.client-logo-slider img {
+  width: 100%;
+  max-width: 170px; /* Ensure the logos aren't too large */
+  height: auto;
+  border: 1px solid #ddd;
+  background-color: #F6F6F5;
   border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
 }
 
-.slider-button {
+.client-logo-slider img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.slick-slide img {
+  display: block;
+  width: 100%;
+  max-width: 170px; /* Ensure the images don't stretch */
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Custom arrows */
+.custom-arrow {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  border: 1px solid black;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
   z-index: 10;
-  background: white;
 }
 
-.slider-button:hover {
-  color: #007bff;
+.custom-next-arrow {
+  right: -30px;
 }
 
-.slider-button:first-of-type {
-  left: 10px;
+.custom-prev-arrow {
+  left: -30px;
 }
 
-.slider-button:last-of-type {
-  right: 10px;
-} */
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .logo-slide {
+    padding: 10px; /* Adjust padding for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-slide img {
+    max-width: 150px; /* Adjust logo size for smaller screens */
+  }
+}
+
+@media (max-width: 448px) {
+  .slick-slide img {
+    display: block;
+    width: 100%;
+    max-width: 100px; /* Ensure the images don't stretch */
+    height: 100px;
+    object-fit: contain;
+  }
+  .slick-slide img {
+    max-width: 120px; /* Smaller size for very small screens */
+  }
+}
