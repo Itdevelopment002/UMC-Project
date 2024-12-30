@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import phoneicon from '../../assets/images/header-img/Rectangle 41106.png'
 import flag1 from '../../assets/images/header-img/united-states.png'
 import flag2 from '../../assets/images/header-img/india.png'
@@ -127,52 +128,63 @@ const Navbar = () => {
                     <nav className={`custom-nav ${isNavCollapsed ? 'nav-hidden' : 'nav-visible'}`}>
                         <ul className="nav-list mb-0 px-4">
                             <li className="nav-item">
-                                <a href="/" className="nav-link active">Home</a>
+                                <Link to="#." className="nav-link active">Home</Link>
                             </li>
+                            <span className="nav-divider"></span>
+
                             <li className="nav-item">
-                                <a href="/" className="nav-link">About UMC</a>
+                                <Link to="#." className="nav-link">About UMC</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Administrative Wings</a>
+                                <Link to="#." className="nav-link">Administrative Wings</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Corporation</a>
+                                <Link to="#." className="nav-link">Corporation</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Departments</a>
+                                <Link to="#." className="nav-link">Departments</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Circulars</a>
+                                <Link to="#." className="nav-link">Circulars</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Online Services</a>
+                                <Link to="#." className="nav-link">Online Services</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">RTS Act 2015</a>
+                                <Link to="#." className="nav-link">RTS Act 2015</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Gallery</a>
+                                <Link to="#." className="nav-link px-3">Gallery</Link>
                             </li>
+                            <span className="nav-divider"></span>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Contact Us</a>
-                            </li>
+                                <Link to="#." className="nav-link">Contact Us</Link>
+                            </li>   
+                            
                         </ul>
                     </nav>
 
                     {/* Social Icons (Always Visible) */}
                     <div className="social-icons d-flex">
-                        <a href="/" className="social-link">
+                        <Link to="/" className="social-link">
                             <img src={headicon1} alt="Twitter" className="twitter-icon" />
-                        </a>
-                        <a href="/" className="social-link">
+                        </Link>
+                        <Link to="/" className="social-link">
                             <img src={headicon2} alt="Facebook" className="facebook-icon" />
-                        </a>
-                        <a href="/" className="social-link">
+                        </Link>
+                        <Link to="/" className="social-link">
                             <img src={headicon3} alt="Instagram" className="insta-icon" />
-                        </a>
-                        <a href="/" className="social-link">
+                        </Link>
+                        <Link to="/" className="social-link">
                             <img src={headicon4} alt="YouTube" className="youtube-icon" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </header>
