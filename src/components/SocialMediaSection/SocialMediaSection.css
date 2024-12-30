@@ -1,73 +1,46 @@
-#social-media-section .media-title {
-  color: #0855a1;
-  font-weight: 700;
-  font-size: 24px;
-  font-family: 'Inter', sans-serif;
+.media-plugin {
+  text-align: center;
 }
 
-#social-media-section .fb {
-  background-color: #306ca9;
-  font-family: "Poppins", serif;
-  font-size: 22px;
+.title-inner h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-#social-media-section .tw {
-  background-color: #1a8cd8;
-  font-family: "Poppins", serif;
-  font-size: 22px;
+iframe {
+  border-radius: 8px;
 }
 
-#social-media-section .you {
+.card-header {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.you {
   background-color: #cc0808;
   font-family: "Poppins", serif;
   font-size: 22px;
 }
 
-#social-media-section .card-header {
-  font-size: 1.2rem;
-  padding: 10px;
+.fb {
+  background-color: #306ca9;
+  font-family: "Poppins", serif;
+  font-size: 22px;
 }
 
-#social-media-section .card {
-  border-radius: 8px;
+.tw {
+  background-color: #1a8cd8;
+  font-family: "Poppins", serif;
+  font-size: 22px;
 }
 
-#social-media-section .card-body iframe,
-#social-media-section .twitter-timeline-container {
-  width: 100%;
-  border-radius: 0px 0px 8px 8px;
-  overflow: hidden;
-
-}
-
-@media screen and (max-width: 768px) {
-  #social-media-section .card {
-    margin-bottom: 20px;
+@media (max-width: 576px) {
+  iframe {
+    height: 300px;
   }
 
-  #social-media-section .card-header {
+  .card-header {
     font-size: 1rem;
-  }
-
-  #social-media-section .card-body iframe,
-  #social-media-section .twitter-timeline-container {
-    height: 250px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  #social-media-section .card-header {
-    font-size: 0.9rem;
-    text-align: center;
     padding: 8px;
-  }
-
-  #social-media-section .card-body iframe,
-  #social-media-section .twitter-timeline-container {
-    height: 200px;
-  }
-
-  #social-media-section .card {
-    margin-bottom: 15px;
   }
 }

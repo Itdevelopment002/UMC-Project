@@ -1,64 +1,86 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-import React from "react";
 import "./SocialMediaSection.css";
+import React, { useEffect } from "react";
 
-const SocialMediaSection = () => {
+const SocialMedia = () => {
+  useEffect(() => {
+    const adjustFacebookWidth = () => {
+      const fbPage = document.querySelector(".fb-page");
+      if (fbPage) {
+        fbPage.setAttribute("data-width", fbPage.parentElement.offsetWidth);
+        if (window.FB) {
+          window.FB.XFBML.parse();
+        }
+      }
+    };
+
+    // Initial adjustment
+    adjustFacebookWidth();
+
+    // Adjust on window resize
+    window.addEventListener("resize", adjustFacebookWidth);
+    return () => window.removeEventListener("resize", adjustFacebookWidth);
+  }, []);
+
   return (
-    <div className="container-fluid mb-5" id="social-media-section">
-      <h2 className="my-2 media-title">Connect with us</h2>
-      <div className="row g-3">
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm h-90">
-            <div className="card-header fb text-white  text-center">
+    <div className="container-fluid">
+      <div className="row d-flex justify-content-around">
+        <div className="col-md-4 col-sm-6 media-plugin">
+          <div className="card-header fb text-white text-center">
             <i className="fab fa-facebook-f me-2"></i>Facebook
-            </div>
-            <div className="card-body p-1 rounded">
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmyumc%2Fposts%2Fpfbid02DycXSV9ZHzoEUcwWKhW3sN7LkajEov3n9fDBYihsHaQAQxVYqbihbHzsr5yxT5sDl&show_text=true&width=500"
-                width="100%"
-                height="400"
-                className="facebook-section"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              ></iframe>
-            </div>
+          </div>
+          <div>
+            <div
+              className="fb-page"
+              data-href="https://www.facebook.com/myumc/"
+              data-tabs="timeline"
+              data-width=""
+              data-height="400"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
+            ></div>
           </div>
         </div>
 
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm h-90">
-            <div className="card-header text-white tw text-center">
+        {/* Twitter Section */}
+        <div className="col-md-4 col-sm-6 media-plugin">
+          <div className="card-header text-white tw text-center">
             <i className="fab fa-twitter me-2"></i>Twitter
-            </div>
-            <div className="card-body p-1 mx-auto">
-              <a
-                className="twitter-timeline"
-                href="https://twitter.com/my_umcofficial?ref_src=twsrc%5Etfw"
-                data-width="340"
-                data-height="400"
-              >
-                Tweets by @my_umcofficial
-              </a>
+          </div>
+          <div>
+            <div className="twitter-timeline twitter-timeline-rendered">
+              <iframe
+                id="twitter-widget-0"
+                scrolling="no"
+                frameBorder="0"
+                allowtransparency="true"
+                allowFullScreen="true"
+                title="Twitter Timeline"
+                src="https://syndication.twitter.com/srv/timeline-profile/screen-name/my_umcofficial"
+                style={{
+                  width: "100%",
+                  height: "400px",
+                  display: "block",
+                  flexGrow: 1,
+                }}
+              ></iframe>
             </div>
           </div>
         </div>
 
-        <div className="col-md-4">
-          <div className="card border-0 shadow-sm h-90">
-            <div className="card-header text-white you text-center ">
+        {/* YouTube Section */}
+        <div className="col-md-4 col-sm-6 media-plugin">
+          <div className="card-header text-white you text-center">
             <i className="fab fa-youtube me-2"></i>YouTube
-            </div>
-            <div className="card-body p-1">
-              <iframe
-                width="100%"
-                height="400"
-                src="https://www.youtube.com/embed/tC_XQ-9PArU"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+          </div>
+          <div>
+            <iframe
+              src="https://www.youtube.com/embed/playlist?list=UUPZN5zAMeNHt3hTfdCO4n8A"
+              width="100%"
+              height="400"
+              title="YouTube Playlist"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -66,4 +88,4 @@ const SocialMediaSection = () => {
   );
 };
 
-export default SocialMediaSection;
+export default SocialMedia;
