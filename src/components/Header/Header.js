@@ -130,6 +130,9 @@ const Navbar = () => {
                                 <a href="/" className="nav-link active">Home</a>
                             </li>
                             <li className="nav-item">
+                                <a href="/" className="nav-link">About UMC</a>
+                            </li>
+                            <li className="nav-item">
                                 <a href="/" className="nav-link">Administrative Wings</a>
                             </li>
                             <li className="nav-item">
@@ -145,7 +148,10 @@ const Navbar = () => {
                                 <a href="/" className="nav-link">Online Services</a>
                             </li>
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Right To Service Act 2015</a>
+                                <a href="/" className="nav-link">RTS Act 2015</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="/" className="nav-link">Gallery</a>
                             </li>
                             <li className="nav-item">
                                 <a href="/" className="nav-link">Contact Us</a>
