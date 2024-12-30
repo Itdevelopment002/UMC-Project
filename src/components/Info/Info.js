@@ -9,7 +9,7 @@ function Info() {
     return (
         <div className="container-fluid my-5">
             <div className="row align-items-center">
-                <div className="col-md-8">
+                <div className="col-md-8 info-card1">
                     <div className="blue-line mb-3"></div>
                     <h1 className="info-heading1">Welcome to</h1>
                     <h2 className="info-heading2 fw-bold">Ulhasnagar Municipal Corporation</h2>

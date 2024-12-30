@@ -23,11 +23,11 @@ const GalleryAndCommunication = () => {
 
   return (
     <div className="container-fluid font-fam mt-4 mb-4">
-      <div className="row">
+      <div className="row ">
         {/* Gallery Section */}
-        <div className="col-lg-8">
+        <div className="col-lg-8 ">
           <h4 className="h4-styling">Gallery</h4>
-          <div className="row">
+          <div className="row gallary-border">
             {galleryImages.map((image, index) => (
               <div className="col-6 col-sm-6 col-md-4 mb-3" key={index}>
                 <div className="card border-0">

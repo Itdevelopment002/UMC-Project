@@ -1,42 +1,91 @@
 .image-style-2 {
   height: 125px;
-  width: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  object-fit: cover;
 }
 
-.font-fam{
-  font-family: 'Inter', sans-serif; 
+.font-fam {
+  font-family: 'Inter', sans-serif;
+}
+
+.gallary-border {
+  margin-top: -10px;
+  background: #fff;
+  border: 1px solid #e8eaed;
+  border-radius: 0px 5px 5px 5px;
+  margin-left: 0.5px !important;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.10);
+  padding: 25px 0px 10px 0px;
 }
 
 .image-style-com-2 {
-    height: 62px;
-    width: 62px; 
-    object-fit: cover; 
-  }
-
-  .card-2 {
-    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-
-@media (max-width: 768px) {
-  .image-style-2 {
-    height: 100px; 
-  }
+  height: 62px;
+  width: 62px;
+  object-fit: cover;
 }
+
+.card-2 {
+  height: 300px;
+  margin-top: 5px;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-styling-small {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.h6-styling-gallery {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
 
 .h4-styling {
-  font-size: 26px;
-  font-weight: bold;
-  color: #0855a1;
+  position: relative;
+  display: inline-block;
+  background-color: #3498db; /* Blue background */
+  color: #fff; /* White text color */
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 7px 20px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  text-align: center;
 }
 
-.text-styling-small{
-    font-size: 20px;
-    font-weight: 600;
+.h4-styling::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Position the triangle below the h4 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px; /* Adjust triangle size */
+  border-color: #3498db transparent transparent transparent; /* Blue triangle */
 }
 
-.h6-styling-gallery{
+@media (max-width: 448px) {
+
+  .image-style-com-2{
+    height:60px;
+    width:60px;
+  }
+  .h6-styling-gallery{
+    font-size:13px;
+  }
+  .text-styling-small{
     font-size: 16px;
-    font-weight: 500;
+  }
+}
+@media (max-width: 768px) {
+  .image-style-2 {
+    height: 100px;
+  }
+  .image-style-com-2{
+    
+  }
 }
