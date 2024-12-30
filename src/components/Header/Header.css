@@ -42,6 +42,18 @@
     color: #ccc;
 }
 
+.nav-divider {
+    display: inline-block;
+    width: 1px; 
+    height: 1.5em; /* Adjust the height to align with text */
+    background-color: #99c9f1; /* Divider color */
+    opacity: 0.5;
+    vertical-align: middle; /* Align with the text */
+}
+
+
+
+
 .text-size {
     cursor: pointer;
 }
@@ -209,8 +221,8 @@
     }
 
     .nav-link {
-        display: block;
-        padding: 13px 20px !important;
+        /* display: block; */
+        padding: 13px 17px !important;
         font-size: 15px !important;
         font-weight: 500;
         font-family: 'Inter';
@@ -297,11 +309,11 @@
         color: #ffffff;
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.3s ease;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
     }
     
     .nav-list li:last-child {
-        border-bottom: none; /* Remove divider for the last item */
+        border-bottom: none; 
     }
     
     .nav-list li::before {
