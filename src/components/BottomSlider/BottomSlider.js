@@ -1,74 +1,115 @@
-// import React, { useState, useEffect, useRef } from "react";
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-// import "./BottomSlider.css";
+import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import './BottomSlider.css';
 
-// import image1 from "../../assets/images/bottom-slider/logo1.png";
-// import image2 from "../../assets/images/bottom-slider/logo2.png";
-// import image3 from "../../assets/images/bottom-slider/logo3.png";
-// import image4 from "../../assets/images/bottom-slider/logo4.png";
-// import image5 from "../../assets/images/bottom-slider/logo5.png";
-// import image6 from "../../assets/images/bottom-slider/logo5.png";
+// Importing images
+import logo1 from "../../assets/images/bottom-slider/logo1.png";
+import logo2 from "../../assets/images/bottom-slider/logo2.png";
+import logo3 from "../../assets/images/bottom-slider/logo3.png";
+import logo4 from "../../assets/images/bottom-slider/logo4.png";
+import logo5 from "../../assets/images/bottom-slider/logo5.png";
+import logo6 from "../../assets/images/bottom-slider/logo6.png";
 
-// const BottomSlider = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const sliderRef = useRef(null);
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow custom-next-arrow" onClick={onClick}>
+      <FaChevronRight size={15} />
+    </div>
+  );
+};
 
-//   const cards = [
-//     { id: 1, imgSrc: image1, alt: "Card 1" },
-//     { id: 2, imgSrc: image2, alt: "Card 2" },
-//     { id: 3, imgSrc: image3, alt: "Card 3" },
-//     { id: 4, imgSrc: image4, alt: "Card 4" },
-//     { id: 5, imgSrc: image5, alt: "Card 5" },
-//     { id: 6, imgSrc: image6, alt: "Card 6" },
-//     { id: 7, imgSrc: image1, alt: "Card 7" },
-//     { id: 8, imgSrc: image2, alt: "Card 8" },
-//     { id: 9, imgSrc: image3, alt: "Card 9" },
-//     { id: 10, imgSrc: image4, alt: "Card 10" },
-//     { id: 11, imgSrc: image5, alt: "Card 11" },
-//     { id: 12, imgSrc: image6, alt: "Card 12" },
-//   ];
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow custom-prev-arrow" onClick={onClick}>
+      <FaChevronLeft size={15} />
+    </div>
+  );
+};
 
-//   const handleNext = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-//   };
+const BottomSlider = () => {
+  // Using imported images in an array
+  const logos = [
+    { src: logo1, alt: 'Logo 1', link: 'https://example1.com' },
+    { src: logo2, alt: 'Logo 2', link: 'https://example2.com' },
+    { src: logo3, alt: 'Logo 3', link: 'https://example3.com' },
+    { src: logo4, alt: 'Logo 4', link: 'https://example4.com' },
+    { src: logo5, alt: 'Logo 5', link: 'https://example5.com' },
+    { src: logo6, alt: 'Logo 6', link: 'https://example6.com' },
+    { src: logo1, alt: 'Logo 1', link: 'https://example1.com' },
+    { src: logo2, alt: 'Logo 2', link: 'https://example2.com' },
+    { src: logo3, alt: 'Logo 3', link: 'https://example3.com' },
+    { src: logo4, alt: 'Logo 4', link: 'https://example4.com' },
+    { src: logo5, alt: 'Logo 5', link: 'https://example5.com' },
+    { src: logo6, alt: 'Logo 6', link: 'https://example6.com' },
+  ];
 
-//   const handlePrev = () => {
-//     setCurrentIndex((prevIndex) =>
-//       prevIndex === 0 ? cards.length - 1 : prevIndex - 1
-//     );
-//   };
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 7,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 868,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          className: 'slider-padding',
+        },
+      },
+    ],
+  };
 
-//   useEffect(() => {
-//     const slider = sliderRef.current;
+  return (
+    <section className="client-logo-slider my-3 mx-5">
+      <div className="content-box">
+        <div className="inner-box">
+          <Slider {...settings}>
+            {logos.map((logo, index) => (
+              <div key={index} className="logo-slide">
+                <a href={logo.link} target="_blank" rel="noopener noreferrer">
+                  <img src={logo.src} alt={logo.alt} />
+                </a>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) => {
-//         const nextIndex = (prevIndex + 1) % cards.length;
-//         slider.style.transform = `translateX(-${nextIndex * 220}px)`;
-//         return nextIndex;
-//       });
-//     }, 2000);
-
-//     return () => clearInterval(interval);
-//   }, [cards.length]);
-
-//   return (
-//     <div className="container">
-//       <button className="slider-button" onClick={handlePrev}>
-//         <FaArrowLeft />
-//       </button>
-//       <div className="slider" ref={sliderRef}>
-//         {cards.map((card) => (
-//           <div className="slider-card" key={card.id}>
-//             <img src={card.imgSrc} alt={card.alt} />
-//           </div>
-//         ))}
-//       </div>
-//       <button className="slider-button" onClick={handleNext}>
-//         <FaArrowRight />
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default BottomSlider;
+export default BottomSlider;

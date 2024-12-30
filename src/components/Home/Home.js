@@ -7,6 +7,7 @@ import EServices from '../EServices/EServices';
 import CitizenServices from '../CitizenServices/CitizenServices';
 import GalleryAndCommunication from '../GalleryAndCommunication/GalleryAndCommunication';
 import SocialMediaSection from "../SocialMediaSection/SocialMediaSection"
+import BottomSlider from '../BottomSlider/BottomSlider'
 import Footer from '../Footer/Footer';
 
 
@@ -20,7 +21,8 @@ const Home = () => {
     <EServices />
      <CitizenServices />
      <GalleryAndCommunication />
-     <SocialMediaSection/>
+     <BottomSlider />
+     {/* <SocialMediaSection/> */}
      <Footer />
     </>
   )

@@ -37,3 +37,11 @@
         width: 60px;  /* Adjust size */
         height: 60px; /* Adjust size */
  }
+ @media (max-width:498px){
+  .info-heading2{
+    font-size: 25px;
+  }
+  .info-card1{
+    margin-bottom: 20px;
+  }
+ }

@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer" id="footer">
             <div className="container-fluid">
                 <div className="row ">
-                    <div className="col-lg-5 col-md-6 mb-4">
+                    <div className="col-lg-5 col-md-8 col-12 mb-4">
                         <div className="footer-logo-section">
                             <img src={Logo} alt="Ulhasnagar Logo" className="footer-logo" />
                             <div>
@@ -52,7 +52,7 @@ const Footer = () => {
                         </ul>
 
                     </div>
-                    <div className="col-lg-2 col-md-6 mb-4">
+                    <div className="col-lg-2 col-md-4 col-sm-4 mb-4">
                         <h4 className="footer-heading">Quick Links</h4>
                         <ul className="footer-links">
                             <li><a href="#">Pay Property Tax</a></li>
@@ -63,7 +63,7 @@ const Footer = () => {
                             <li><a href="#">DAY-NULM</a></li>
                         </ul>
                     </div>
-                    <div className="col-lg-2 col-md-6 mb-4 mx-auto">
+                    <div className="col-lg-2 col-md-8 col-sm-4 mb-4 mx-auto">
                         <h4 className="footer-heading">Help</h4>
                         <ul className="footer-links">
                             <li><a href="#">Customer Support</a></li>
@@ -74,7 +74,7 @@ const Footer = () => {
                             <li><a href="#">Accessibility Statement</a></li>
                         </ul>
                     </div>
-                    <div className="col-lg-2 col-md-6 mb-4">
+                    <div className="col-lg-2 col-md-4 col-sm-4 mb-4">
                         <h4 className="footer-heading">Online Services</h4>
                         <ul className="footer-links">
                             <li><a href="#">Property Tax</a></li>
