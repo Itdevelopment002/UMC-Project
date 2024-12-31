@@ -157,7 +157,7 @@
   border-radius: 10px;
   border-left: 5px solid #48AAF0;
   border-bottom: 5px solid #48AAF0;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Name Styling */
