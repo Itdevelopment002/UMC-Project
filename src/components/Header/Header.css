@@ -158,12 +158,17 @@
 }
 
 .banner-img2 {
+    width: 70px;
+    height: 46px;
+}
+
+.banner-img3 {
     width: 48px;
     height: 46px;
     object-fit: cover;
 }
 
-.banner-img3 {
+.banner-img4 {
     width: 58px;
     height: 48px;
     object-fit: cover;
@@ -486,6 +491,10 @@
     .banner-img3 {
         display: none;
     }
+
+    .banner-img4 {
+        display: none;
+    }
     .toggle-btn {
         font-size: 24px;
         margin-left: -10px;
@@ -555,6 +564,11 @@
         display: block;
     }
 
+    .banner-img4 {
+        margin-top: -20px;
+        display: block;
+    }
+
     .toggle-btn {
         font-size: 24px;
         margin-left: -15px;
@@ -615,13 +629,18 @@
     }
 
     .banner-img2 {
-        display: none;
-    }
-    .banner-img3 {
-        width: 48px;
+        width: 60px;
         height: 38px;
         margin-top: -20px;
         display: block;
+    }
+
+    .banner-img3 {
+        display: none;
+    }
+
+    .banner-img4 {
+        display: none;
     }
 
     .toggle-btn {
