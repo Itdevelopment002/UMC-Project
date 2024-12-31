@@ -183,18 +183,18 @@
   margin-top: 5px;
 }
 
-@media (max-width: 786px) {
+/* @media (max-width: 786px) {
   .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 138px;
+  height: 178px;
    
   }
-} 
+}  */
 
 @media (max-width: 768px) {
   .profile-image {
-    width: 180px;
-    height: 180px;
+    width: 139px;
+    height: 178px;
    
   }
   .profile-div{
