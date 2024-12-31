@@ -322,7 +322,9 @@
         
 
     }
-
+.nav-divider{
+    display: none;
+}
     .nav-list {
         list-style: none;
         padding: 0;
