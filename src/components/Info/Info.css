@@ -20,16 +20,17 @@
 .description {
   font-size: 16px;
   font-family: "Inter";
-  line-height: 1.5;
-  color: #718096;
+  line-height: 1.7;
+  color: #313233;
 }
 
 .see-more-btn {
   color: #0855a1 !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
   font-family: "Inter" !important;
   text-decoration: none !important;
+  margin-top: 50px !important;
 }
 
 .playicon {
@@ -43,4 +44,161 @@
   .info-card1 {
     margin-bottom: 20px;
   }
+} 
+
+
+
+
+/* Add Padding Between Columns for Consistency */
+.col-md-3 {
+  padding: 10px;
 }
+
+/* h5 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+} */
+
+.text-muted {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+/* .welcome-section{
+  padding-left: 30px !important;
+  padding-right: 40px !important;
+} */
+
+
+.highlight {
+  color: #4a90e2;
+}
+
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Button Group Container */
+.button-group {
+  margin-top: 20px;
+}
+
+/* Individual Button Container */
+.button-item {
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.custom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effect */
+.custom-btn:hover {
+  background-color: #e8f4ff;
+  border-color: #007bff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Icon Styling */
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Vertical Line Styling */
+.vertical-line {
+  width: 1px;
+  height: 24px;
+  background-color: #dcdcdc;
+  margin-right: 10px;
+}
+
+/* Selected Button Styling */
+.custom-btn.active {
+  background-color: #d9f1ff;
+  border-color: #007bff;
+}
+
+
+.profile-div{
+  padding-right: 50px !important;
+}
+/* Profile Card Container */
+.profile-card {
+  background-color: #ffffff;
+  /* border-radius: 10px; */
+  /* padding: 5px; */
+  text-align: center;
+  border-right: 2px solid #e6e6e6;
+}
+
+/* Profile Image Styling */
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  border-left: 5px solid #48AAF0;
+  border-bottom: 5px solid #48AAF0;
+  object-fit: cover;
+}
+
+/* Name Styling */
+.custom-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0855A1;
+  margin-top: 15px;
+}
+
+/* Title Styling */
+.custom-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin: 2px 0;
+}
+
+/* Organization Styling */
+.organization {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+@media (max-width: 786px) {
+  .profile-image {
+    width: 100px;
+    height: 100px;
+   
+  }
+} 
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 180px;
+    height: 180px;
+   
+  }
+  .profile-div{
+    padding-right: 30px !important;
+  }
+} 
+
