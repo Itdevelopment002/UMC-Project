@@ -5,7 +5,7 @@ import img1 from "../../assets/images/Gallery/gallery-1.png";
 import img2 from "../../assets/images/Gallery/gallery-2.png";
 import img3 from "../../assets/images/Gallery/gallery-3.png";
 import img4 from "../../assets/images/Gallery/gallery-4.png";
-import img5 from "../../assets/images/Gallery/gallery-5.png";
+import img5 from "../../assets/images/Gallery/gallery-5.webp";
 import img6 from "../../assets/images/Gallery/gallery-6.png";
 import img7 from "../../assets/images/Gallery/communication-1.png";
 import img8 from "../../assets/images/Gallery/communication-2.png";
