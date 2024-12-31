@@ -47,7 +47,7 @@
 import React from "react";
 import "./Info.css";
 import { Link } from "react-router-dom";
-import video1 from "../../assets/images/info/imgpsh_fullsize_anim.jpg";
+import video1 from "../../assets/images/info/commisioner1.jpg";
 import info1 from "../../assets/images/info/folder 1.png";
 import info2 from "../../assets/images/info/bad-review 1.png";
 import info3 from "../../assets/images/info/ewallet 1.png";
