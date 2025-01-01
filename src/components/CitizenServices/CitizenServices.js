@@ -12,32 +12,32 @@ const CitizenServices = () => {
     {
       title: "Tenders & Quotation",
       image: img1,
-      color: "#FF6A58",
+      color: "#333333",
     },
     {
       title: "Property Tax",
       image: img2,
-      color: "#019CB6",
+      color: "#333333",
     },
     {
       title: "Water Tax",
       image: img3,
-      color: "#674695",
+      color: "#333333",
     },
     {
       title: "Right To Information",
       image: img4,
-      color: "#FF6A58",
+      color: "#333333",
     },
     {
       title: "E-Tenders",
       image: img5,
-      color: "#019CB6",
+      color: "#333333",
     },
     {
       title: "Marriage Registration",
       image: img6,
-      color: "#674695",
+      color: "#333333",
     },
   ];
 

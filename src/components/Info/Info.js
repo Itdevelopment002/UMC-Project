@@ -44,7 +44,7 @@
 
 // export default Info;
 
-import React from "react";
+import React, { useState } from "react";
 import "./Info.css";
 import { Link } from "react-router-dom";
 import video1 from "../../assets/images/info/commisioner1.jpg";
@@ -58,6 +58,16 @@ import info5 from "../../assets/images/info/waste-management 1.png";
 
 
 const App = () => {
+  const [activeButton, setActiveButton] = useState("e-Tender");
+
+  const buttons = [
+    { id: "e-Tender", label: "e-Tender", icon: info1 },
+    { id: "Complaint Portal", label: "Complaint Portal", icon: info2 },
+    { id: "Online Payment", label: "Online Payment", icon: info3 },
+    { id: "RTS 2015", label: "RTS 2015", icon: info4 },
+    { id: "Solid Waste Management", label: "Solid Waste Management", icon: info5 },
+  ];
+
   return (
     <div className="container-fluid mt-5">
       <div className="row align-items-center">
@@ -95,61 +105,18 @@ const App = () => {
         {/* Buttons Section */}
         <div className=" col-lg-3 col-md-12">
           <div className="button-group">
-            <div className="button-item">
-              <button className="custom-btn">
-                <img
-                  src={info1}
-                  alt="Icon"
-                  className="btn-icon"
-                />
-                <div className="vertical-line"></div>
-                e-Tender
-              </button>
-            </div>
-            <div className="button-item">
-              <button className="custom-btn">
-                <img
-                  src={info2}
-                  alt="Icon"
-                  className="btn-icon"
-                />
-                <div className="vertical-line"></div>
-                Complaint Portal
-              </button>
-            </div>
-            <div className="button-item">
-              <button className="custom-btn">
-                <img
-                  src={info3}
-                  alt="Icon"
-                  className="btn-icon"
-                />
-                <div className="vertical-line"></div>
-                Online Payment
-              </button>
-            </div>
-            <div className="button-item">
-              <button className="custom-btn">
-                <img
-                  src={info4}
-                  alt="Icon"
-                  className="btn-icon"
-                />
-                <div className="vertical-line"></div>
-                RTS 2015
-              </button>
-            </div>
-            <div className="button-item">
-              <button className="custom-btn">
-                <img
-                  src={info5}
-                  alt="Icon"
-                  className="btn-icon"
-                />
-                <div className="vertical-line"></div>
-                Solid Waste Management
-              </button>
-            </div>
+            {buttons.map((button) => (
+              <div key={button.id} className="button-item">
+                <button
+                  className={`custom-btn ${activeButton === button.id ? "active" : ""}`}
+                  onClick={() => setActiveButton(button.id)}
+                >
+                  <img src={button.icon} alt="Icon" className="btn-icon" />
+                  <div className="vertical-line"></div>
+                  {button.label}
+                </button>
+              </div>
+            ))}
           </div>
         </div>
 

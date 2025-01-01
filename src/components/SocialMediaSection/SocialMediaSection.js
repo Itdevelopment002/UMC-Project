@@ -25,7 +25,7 @@ const SocialMedia = () => {
       <div className="row d-flex justify-content-around social-media-border">
         <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header fb text-white text-center">
-            <i className="fab fa-facebook-f me-2"></i>Facebook
+            <i className="fab fa-facebook-f me-2"></i>UMC on Facebook
           </div>
           <div>
             <div
@@ -45,7 +45,7 @@ const SocialMedia = () => {
         {/* Twitter Section */}
         <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white tw text-center">
-            <i className="fab fa-twitter me-2"></i>Twitter
+            <i className="fab fa-twitter me-2"></i>UMC on Twitter
           </div>
           <div>
             <div className="twitter-timeline twitter-timeline-rendered">
@@ -71,7 +71,7 @@ const SocialMedia = () => {
         {/* YouTube Section */}
         <div className="col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white you text-center">
-            <i className="fab fa-youtube me-2"></i>YouTube
+            <i className="fab fa-youtube me-2"></i>UMC on YouTube
           </div>
           <div>
             <iframe

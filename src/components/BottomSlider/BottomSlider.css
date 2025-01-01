@@ -24,8 +24,8 @@
   width: 100%;
   max-width: 170px;
   height: auto;
-  border: 1px solid #ddd;
-  background-color: #f6f6f5;
+  border: 1px solid #FFFAF0;
+  background-color: #FFFAF0;
   border-radius: 10px;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;

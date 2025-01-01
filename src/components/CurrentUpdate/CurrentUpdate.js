@@ -5,12 +5,12 @@ const CurrentUpdate = () => {
   const [animationState, setAnimationState] = useState({});
   const manualUpdates = [
     { description: "Stay updated with the latest trends!" },
-    { description: "Manual News 2: Our services are now expanded globally." },
-    { description: "Manual News 3: Big savings on our premium plans." },
-    { description: "Manual News 4: Join our upcoming webinar on technology." },
+    { description: "Our services are now expanded globally." },
+    { description: "Big savings on our premium plans." },
+    { description: "Join our upcoming webinar on technology." },
     {
       description:
-        "Manual News 5: Exciting offers available for a limited time!",
+        "Exciting offers available for a limited time!",
     },
   ];
 
@@ -62,7 +62,7 @@ const CurrentUpdate = () => {
           >
             {manualUpdates.concat(manualUpdates).map((item, index) => (
               <div className="marquee-item" key={index}>
-                <span style={{ color: "#3EA4ED" }}>
+                <span style={{ color: "#FFAF50" }}>
                   {(index % manualUpdates.length) + 1}.{" "}
                 </span>
                 {item.description}

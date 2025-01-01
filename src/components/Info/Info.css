@@ -1,18 +1,18 @@
 .blue-line {
   width: 50px;
   height: 4px;
-  background: linear-gradient(to right, #66d0f7 0%, #0f4e7b 100%);
+  background: linear-gradient(to right,#7B202A 0%, #F1A74E 100%);
   margin-bottom: 15px;
 }
 
 .info-heading1 {
-  color: #0855a1;
+  color: #F0A64E;
   font-size: 31px;
   font-weight: 400;
   font-family: "Inter";
 }
 .info-heading2 {
-  color: #0855a1;
+  color: #7B202A;
   font-size: 30px;
   font-family: "Inter";
 }
@@ -21,11 +21,13 @@
   font-size: 16px;
   font-family: "Inter";
   line-height: 1.7;
-  color: #313233;
+  color: #242930;
+  word-spacing: 0.1rem;
+
 }
 
 .see-more-btn {
-  color: #0855a1 !important;
+  color: #000000 !important;
   font-size: 17px !important;
   font-weight: 700 !important;
   font-family: "Inter" !important;
@@ -111,10 +113,14 @@
 
 /* Button Hover Effect */
 .custom-btn:hover {
-  background-color: #e8f4ff;
-  border-color: #007bff;
+  background-color: #FFFAF0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+.custom-btn.active {
+  background-color: #FFFAF0 !important; /* Example active background color */
+  border: 1px solid #FFFAF0 !important; /* Example border for active state */
+}
+
 
 /* Button Icon Styling */
 .btn-icon {
@@ -155,8 +161,8 @@
   width: 140px;
   height: 180px;
   border-radius: 10px;
-  border-left: 5px solid #48AAF0;
-  border-bottom: 5px solid #48AAF0;
+  border-left: 5px solid #FFAF50;
+  border-bottom: 5px solid #FFAF50;
   object-fit: contain;
 }
 
@@ -164,7 +170,7 @@
 .custom-name {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #0855A1;
+  color: #7B202A;
   margin-top: 15px;
 }
 
