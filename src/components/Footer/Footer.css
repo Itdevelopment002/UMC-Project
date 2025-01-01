@@ -1,5 +1,5 @@
 .footer {
-  background-color: #093158;
+  background-color: #2F0B0F;
   color: #ffffff;
   padding: 40px 0;
   font-family: "Roboto", sans-serif;
@@ -82,7 +82,7 @@
   font-family: "Poppins", serif;
   font-size: 20px;
   font-weight: 600;
-  color: #48aaf0;
+  color: #FFAF50;
   margin-bottom: 15px;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .footer-links a:hover {
-  color: #00bcd4;
+  color: #FFAF50;
 }
 
 .footer-divider {

@@ -47,7 +47,7 @@ const GalleryAndCommunication = () => {
           <h4 className="h4-styling">Citizens Communication</h4>
           <div
             className="card card-2 px-3 py-3 border-0"
-            style={{ background: "#EAFCFF" }}
+            style={{ background: "#FFFAF0" }}
           >
             <div className="mb-3">
               <div className="d-flex align-items-center py-3 px-2">

@@ -17,6 +17,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 3000,
   fade: true,
+  pauseOnHover: false,
 };
 
 const Corousel = () => {
