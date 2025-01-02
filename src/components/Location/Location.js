@@ -12,7 +12,7 @@ const Location = () => {
         <Link to="#" className="breadcrumb-item text-decoration-none">
           About UMC
         </Link>
-        <span className="breadcrumb-item active">Location</span>
+        <span className="breadcrumb-item active1">Location</span>
       </nav>
       <h2 className="location-title">
         <span className="highlight">Location</span>
