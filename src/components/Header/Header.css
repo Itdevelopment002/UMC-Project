@@ -5,7 +5,7 @@
 
 /* Top Bar Styling */
 .top-bar {
-    background-color: #F0E9DB;
+    background-color: #FFF7E2;
     padding: 0.31rem 3rem;
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@
     display: inline-block;
     width: 1px; 
     height: 1.5em; /* Adjust the height to align with text */
-    background-color: #7B202A; /* Divider color */
+    background-color: #F0E9DB; /* Divider color */
     opacity: 0.5;
     vertical-align: middle; /* Align with the text */
 }
@@ -129,7 +129,7 @@
 
 .brand-name {
     font-size: 24px;
-    color: #292D34;
+    color: #D2263E;
     font-weight: 500;
     margin-top: 10px;
     font-family: 'Rowdies';
@@ -138,7 +138,7 @@
 .brand-subtitle {
     font-family: 'Ramabhadra';
     font-size: 16px;
-    color: #292D34;
+    color: #D2263E;
     font-weight: 500;
     margin-top: -5px;
 }
@@ -185,7 +185,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFAF50;
+    background-color: #FE912C;
     /* z-index: 9999; */
     position: relative;
     width: 100%;
@@ -204,7 +204,7 @@
 .social-icons {
     /* padding: 0.31rem 3rem; */
     display: flex;
-    gap: 20px;
+    gap: 7px !important;
 }
 
 .social-link {
@@ -299,12 +299,12 @@
     
     .nav-menu .nav-link:hover,
     .nav-menu .nav-link.active {
-        background-color: #F0E9DB;
+        background-color:#FFF7E2;
         color: #000 !important;
     }
     
     .nav-menu .nav-link:hover {
-        background-color: #F0E9DB;
+        background-color: #FFF7E2;
         color: #000 ;
 
     }
@@ -335,7 +335,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        background-color: #FFAF50; /* Attractive background */
+        background-color: #FE912C; /* Attractive background */
         border-radius: 8px;
         overflow: hidden;
         max-width: 300px;

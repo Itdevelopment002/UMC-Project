@@ -135,12 +135,15 @@ const Navbar = () => {
                         <Link to="/" className="social-link">
                             <img src={twitter} alt="Twitter" className="twitter-icon" />
                         </Link>
+                        <span className="divider">|</span>
                         <Link to="/" className="social-link">
                             <img src={facebook} alt="Facebook" className="facebook-icon" />
                         </Link>
+                        <span className="divider">|</span>
                         <Link to="/" className="social-link">
                             <img src={instagram} alt="Instagram" className="insta-icon" />
                         </Link>
+                        <span className="divider">|</span>
                         <Link to="/" className="social-link">
                             <img src={youtube} alt="YouTube" className="youtube-icon" />
                         </Link>
