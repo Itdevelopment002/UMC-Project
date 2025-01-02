@@ -124,7 +124,9 @@ const App = () => {
         {/* Welcome Section */}
         <div className=" col-lg-6 col-md-12 welcome-section">
           {/* <div className="blue-line mb-3"></div> */}
+          <div className="heading">
           <h1 className="info-heading1">Welcome to <span className="info-heading2 fw-bold">Ulhasnagar Municipal Corporation</span></h1>
+          </div>
           {/* <h2 className="info-heading2 fw-bold">
             Ulhasnagar Municipal Corporation
           </h2> */}
@@ -161,7 +163,7 @@ const App = () => {
               {/* Button Label */}
               <div
                 className="button-label"
-                style={{ color: button.color }}
+                style={{ color: 'black', fontFamily: 'Roboto' }}
               >
                 {button.label}
               </div>
