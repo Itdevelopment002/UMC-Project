@@ -161,6 +161,7 @@ import React, { useState } from "react";
 import "./EServices.css";
 import { CiCircleCheck } from "react-icons/ci";
 import img from "../../assets/images/project/project.png";
+import tick from '../../assets/images/info/tick.png'
 
 const EServices = () => {
   const [activeTab, setActiveTab] = useState("#umc-news");
@@ -277,7 +278,7 @@ const EServices = () => {
                   .find((tab) => tab.id === activeTab)
                   ?.items.map((item, index) => (
                     <li key={index}>
-                      <CiCircleCheck className="me-2 custom-icons" />
+                      <img src={tick} className="custom-icons" alt="" />
                       {item}
                     </li>
                   ))}

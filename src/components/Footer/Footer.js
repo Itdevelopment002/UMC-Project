@@ -139,12 +139,12 @@ const Footer = () => {
           </div>
         </div>
         <hr className="footer-divider" />
-        <div className="footer-bottom">
-          <span>
+        <div className="footer-bottom p-0">
+          <span className="footer-sapn1">
             &copy; 2024 Ulhasnagar Municipal Corporation. All Rights Reserved.
           </span>
           <span className="fw-bold">Total Visitors: 18243</span>
-          <span>Design & Developed by Infoigy</span>
+          <span className="footer-sapn2">Design & Developed by Infoigy</span>
         </div>
       </div>
     </footer>

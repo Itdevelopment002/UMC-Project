@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./GalleryAndCommunication.css";
-import img1 from "../../assets/images/Gallery/gallery-1.png";
-import img2 from "../../assets/images/Gallery/gallery-2.png";
-import img3 from "../../assets/images/Gallery/gallery-3.png";
-import img4 from "../../assets/images/Gallery/gallery-4.png";
-import img5 from "../../assets/images/Gallery/gallery-5.webp";
-import img6 from "../../assets/images/Gallery/gallery-6.png";
+import img1 from "../../assets/images/Gallery/gallery-image1.png";
+import img2 from "../../assets/images/Gallery/gallery-image2.png";
+import img3 from "../../assets/images/Gallery/gallery-image3.png";
+import img4 from "../../assets/images/Gallery/gallery-image4.png";
+import img5 from "../../assets/images/Gallery/gallery-image5.png";
+import img6 from "../../assets/images/Gallery/gallary-image6.png";
 import img7 from "../../assets/images/Gallery/communication-1.png";
 import img8 from "../../assets/images/Gallery/communication-2.png";
 import GLightbox from "glightbox";
@@ -34,7 +34,7 @@ const GalleryAndCommunication = () => {
             </div>
           </div>
 
-          <div className="row gallary-border">
+          <div className="row">
             {galleryImages.map((image, index) => (
               <div className="col-6 col-sm-6 col-md-4 mb-3" key={index}>
                 <div className="card border-0">
@@ -72,7 +72,7 @@ const GalleryAndCommunication = () => {
                   className="image-style-com-2 me-4"
                 />
                 <div>
-                  <h6 className="mb-0 h6-styling-gallery">
+                  <h6 className="mb-1 h6-styling-gallery">
                     Government of India
                   </h6>
                   <small className="text-styling-small">PG Portal</small>
@@ -81,20 +81,20 @@ const GalleryAndCommunication = () => {
             </div>
             <hr
               style={{
-                backgroundColor: "#0855A1",
+                backgroundColor: "#832E37",
                 height: "2px",
                 border: "none",
               }}
             />
             <div>
-              <div className="d-flex align-items-center py-3 px-2">
+              <div className="d-flex align-items-center py-3 px-2 mb-2">
                 <img
                   src={img8}
                   alt="Maharashtra State"
                   className="image-style-com-2 me-4"
                 />
                 <div>
-                  <h6 className="mb-0 h6-styling-gallery">Maharashtra State</h6>
+                  <h6 className="mb-1 h6-styling-gallery">Maharashtra State</h6>
                   <small className="text-styling-small">
                     Grievance Registration
                   </small>
