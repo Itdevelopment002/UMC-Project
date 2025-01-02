@@ -1,47 +1,145 @@
-.background-container {
-  background-image: url("../../assets/images/citizen-services/citizen-bg.png");
-  background-size: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+ .background-container {
+  background-color: #fff8f2; 
   font-family: "Inter", sans-serif;
 }
 
-.heading-2 {
-  color: #832E37;
-  font-size: 25px;
-  font-weight: bold;
+#citizen-section .citigen {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#citizen-section .vertical-line {
+  position: relative;
+  height: 70px;
+  margin-right: 10px;
+}
+#citizen-section .vertical-line::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 19px;
+  bottom: 22px;
+  width: 4px;
+  background: linear-gradient(to bottom, #F1A74E 0%, #7B202A 100%);
+}
+#citizen-section .section-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Inter";
+  margin: 0;
 }
 
-.img-style {
-  width: 90px;
-  height: 90px;
+#citizen-section .subtitle {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 400;
+}
+#citizen-section .video-wrapper {
+  position: relative;
+  margin-bottom: 20px; 
 }
 
-.card1 {
+#citizen-section .video-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#citizen-section .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#citizen-section .playicon {
+  width: 40px;
+  height: 40px;
+}
+#citizen-section .service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #ffffff;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-bottom-right-radius: 20px !important;
+  height: 70%;
 }
-
-.card1:hover {
-  background: #fafafa;
+#citizen-section .service-card:hover {
   transform: translateY(-5px);
-  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#citizen-section .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card-title1 {
-  font-weight: 500;
-  font-size: 17px;
+#citizen-section .service-image {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 448px) {
-  .img-style {
-    width: 50px;
-    height: 50px;
+#citizen-section .service-title {
+  font-size: 12px;
+  color: #555555;
+  font-weight: 700;
+  text-align: center;
+}
+
+#citizen-section .menu-list {
+  max-width: 400px;
+  margin: 20px auto 0;
+}
+
+#citizen-section .menu-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-left: 4px solid #ffa500; /* Orange border on the left */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#citizen-section .menu-item:hover {
+  background-color: #fff3e0; 
+}
+
+#citizen-section .menu-text {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+#citizen-section .menu-image img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  #citizen-section .service-title {
+    font-size: 12px;
   }
-  .card-title1 {
-    font-weight: 500;
+
+  #citizen-section .playicon {
+    width: 35px;
+    height: 35px;
+  }
+
+  #citizen-section .menu-item {
     font-size: 14px;
   }
 }

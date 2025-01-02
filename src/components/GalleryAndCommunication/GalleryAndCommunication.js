@@ -22,10 +22,18 @@ const GalleryAndCommunication = () => {
   }, []);
 
   return (
-    <div className="container-fluid font-fam mt-4 mb-4">
+    <div className="container-fluid font-fam mt-4 mb-4" id="image-com-section">
       <div className="row ">
         <div className="col-lg-8 ">
-          <h4 className="h4-styling">Gallery</h4>
+          <div className="citigen">
+            <div className="vertical-line"></div>
+            <div className="d-flex">
+              <h2 className="section-title">
+                Photo <span className="subtitle">Gallery</span>
+              </h2>
+            </div>
+          </div>
+
           <div className="row gallary-border">
             {galleryImages.map((image, index) => (
               <div className="col-6 col-sm-6 col-md-4 mb-3" key={index}>
@@ -44,7 +52,14 @@ const GalleryAndCommunication = () => {
         </div>
 
         <div className="col-lg-4 citizen-communication-div">
-          <h4 className="h4-styling">Citizens Communication</h4>
+        <div className="citigen">
+            <div className="vertical-line"></div>
+            <div className="d-flex">
+              <h2 className="section-title">
+                Citizen <span className="subtitle">Communication</span>
+              </h2>
+            </div>
+          </div>
           <div
             className="card card-2 px-3 py-3 border-0"
             style={{ background: "#FFFAF0" }}
