@@ -20,12 +20,18 @@ const SocialMedia = () => {
 
   return (
     <div className="container-fluid" id="social-media-section">
-      <h4 className="h4-styling-new">Connect With Us</h4>
-
+      <div className="citigen">
+        <div className="vertical-line"></div>
+        <div className="d-flex">
+          <h2 className="section-title">
+            Connect <span className="subtitle">With Us</span>
+          </h2>
+        </div>
+      </div>
       <div className="row d-flex justify-content-around social-media-border">
         <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header fb text-white text-center">
-            <i className="fab fa-facebook-f me-2"></i>UMC on Facebook
+            UMC on Facebook
           </div>
           <div>
             <div
@@ -45,7 +51,7 @@ const SocialMedia = () => {
         {/* Twitter Section */}
         <div className=" col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white tw text-center">
-            <i className="fab fa-twitter me-2"></i>UMC on Twitter
+            UMC on Twitter
           </div>
           <div>
             <div className="twitter-timeline twitter-timeline-rendered">
@@ -71,7 +77,7 @@ const SocialMedia = () => {
         {/* YouTube Section */}
         <div className="col-lg-4 col-md-6 col-sm-6 media-plugin">
           <div className="card-header text-white you text-center">
-            <i className="fab fa-youtube me-2"></i>UMC on YouTube
+            UMC on YouTube
           </div>
           <div>
             <iframe

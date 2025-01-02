@@ -226,7 +226,7 @@ const Navbar = () => {
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="aboutUMCDropdown">
                                     <li>
-                                        <Link to="#Location" className="dropdown-item">
+                                        <Link to="/location" className="dropdown-item">
                                             Location
                                         </Link>
                                     </li>
@@ -236,7 +236,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#History" className="dropdown-item">
+                                        <Link to="/history" className="dropdown-item">
                                             History
                                         </Link>
                                     </li>
