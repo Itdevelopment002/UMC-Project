@@ -1,18 +1,20 @@
 .blue-line {
   width: 50px;
   height: 4px;
-  background: linear-gradient(to right,#7B202A 0%, #F1A74E 100%);
+  background: linear-gradient(to right, #7B202A 0%, #F1A74E 100%);
   margin-bottom: 15px;
 }
 
 .info-heading1 {
-  color: #F0A64E;
+  color: #000;
   font-size: 31px;
   font-weight: 400;
   font-family: "Inter";
+  margin-bottom: 15px;
 }
+
 .info-heading2 {
-  color: #7B202A;
+  color: #C45896;
   font-size: 30px;
   font-family: "Inter";
 }
@@ -27,7 +29,7 @@
 }
 
 .see-more-btn {
-  color: #000000 !important;
+  color: #3D70D0 !important;
   font-size: 17px !important;
   font-weight: 700 !important;
   font-family: "Inter" !important;
@@ -39,14 +41,16 @@
   width: 60px;
   height: 60px;
 }
+
 @media (max-width: 498px) {
   .info-heading2 {
     font-size: 25px;
   }
+
   .info-card1 {
     margin-bottom: 20px;
   }
-} 
+}
 
 
 
@@ -83,70 +87,15 @@
   text-decoration: underline;
 }
 
-/* Button Group Container */
-.button-group {
-  margin-top: 20px;
-}
-
-/* Individual Button Container */
-.button-item {
-  margin-bottom: 15px;
-}
-
-/* Button Styling */
-.custom-btn {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  background-color: #f8f9fa;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333333;
-  transition: all 0.3s ease;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Hover Effect */
-.custom-btn:hover {
-  background-color: #FFFAF0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.custom-btn.active {
-  background-color: #FFFAF0 !important; /* Example active background color */
-  border: 1px solid #FFFAF0 !important; /* Example border for active state */
-}
-
-
-/* Button Icon Styling */
-.btn-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-/* Vertical Line Styling */
-.vertical-line {
-  width: 1px;
-  height: 24px;
-  background-color: #dcdcdc;
-  margin-right: 10px;
-}
 
 /* Selected Button Styling */
-.custom-btn.active {
-  background-color: #d9f1ff;
-  border-color: #007bff;
-}
 
 
-.profile-div{
+
+.profile-div {
   padding-right: 50px !important;
 }
+
 /* Profile Card Container */
 .profile-card {
   background-color: #ffffff;
@@ -158,19 +107,21 @@
 
 /* Profile Image Styling */
 .profile-image {
-  width: 140px;
+  width: 150px;
   height: 180px;
-  border-radius: 10px;
-  border-left: 5px solid #FFAF50;
-  border-bottom: 5px solid #FFAF50;
-  object-fit: contain;
+  border-radius: 20px;
+  border-left: 5px solid #8ABF4D;
+  border-bottom: 5px solid #8ABF4D;
+  object-fit: cover;
+  box-shadow: 5px -5px 10px rgba(83, 83, 83, 0.1);
 }
+
 
 /* Name Styling */
 .custom-name {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #7B202A;
+  color: #D2263E;
   margin-top: 15px;
 }
 
@@ -185,7 +136,7 @@
 /* Organization Styling */
 .organization {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #212121;
   margin-top: 5px;
 }
 
@@ -197,14 +148,83 @@
   }
 }  */
 
+
+#info-section {
+  margin-top: -20px;
+}
+
+#info-section .custom-btn {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#info-section .button-icon-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#info-section .btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+#info-section .vertical-line {
+  width: 2px;
+  height: 100%;
+  background-color: #e0e0e0;
+  margin: 0 10px;
+}
+
+#info-section .button-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+#info-section .custom-btn:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+#info-section .custom-btn.active {
+  background-color: #FFFAF0;
+  border-color: #cccdce;
+}
+
+
 @media (max-width: 768px) {
   .profile-image {
     width: 139px;
     height: 178px;
-   
+
   }
-  .profile-div{
+
+  .profile-div {
     padding-right: 30px !important;
   }
-} 
+}
 
+@media (max-width: 992px) {
+  .welcome-section {
+    margin-top: 20px;
+  }
+
+  #info-section {
+    margin-top: 30px;
+  }
+}

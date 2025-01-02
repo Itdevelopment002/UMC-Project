@@ -1,72 +1,91 @@
-import React, { useRef } from "react";
-import Slider from "react-slick";
-import { GrPrevious, GrNext } from "react-icons/gr";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
 import "./Carousel.css";
-import image1 from "../../assets/images/banner/baner1.png";
-import image2 from "../../assets/images/banner/baner1.png";
-import image3 from "../../assets/images/banner/baner1.png";
+import slide1 from "../../assets/images/banner/Slider new.png";
+import slide2 from "../../assets/images/banner/Slider new.png";
+import slide3 from "../../assets/images/banner/Slider new.png";
+import slide4 from "../../assets/images/banner/Slider new.png";
+import cmImage1 from "../../assets/images/banner/current-CM.png";
+import cmImage2 from "../../assets/images/banner/Prev-CM.png";
+import cmImage3 from "../../assets/images/banner/UP_CM.png";
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  fade: true,
-  pauseOnHover: false,
-};
-
-const Corousel = () => {
-  const sliders = [
-    { id: 1, image: image1 },
-    { id: 2, image: image2 },
-    { id: 3, image: image3 },
+const App = () => {
+  const slides = [
+    { id: 1, src: slide1, alt: "City View 1" },
+    { id: 2, src: slide2, alt: "City View 2" },
+    { id: 3, src: slide3, alt: "City View 3" },
+    { id: 4, src: slide4, alt: "City View 4" },
   ];
 
-  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const goToPrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
-
-  const goToNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
+  const handleSlideChange = (index) => {
+    setCurrentSlide(index);
   };
 
   return (
-    <section className="banner-section">
-      <div className="banner-carousel">
-        <Slider ref={sliderRef} {...settings}>
-          {sliders.map((slider) => (
-            <div key={slider.id} className="slide-item">
-              <div
-                className="image-layer"
-                style={{
-                  backgroundImage: `url(${slider.image})`,
-                }}
-              ></div>
+    <div className="container-fluid">
+      <div className="row home-carousel-section">
+        <div className="col-lg-6 col-md-12 col-xl-3 col-12 custom-profile-card1 ">
+          <ProfileCard
+            name="Shri. Devendra Fadnavis"
+            position="Hon'ble Chief Minister of Maharashtra"
+            image={cmImage1}
+            bgColor='#E0F8F2'
+          />
+          <ProfileCard
+            name="Shri. Eknath Shinde"
+            position="Deputy Chief Minister of Maharashtra"
+            image={cmImage2}
+            bgColor="#EEECFF"
+          />
+          <ProfileCard
+            name="Shri. Ajit Pawar"
+            position="Deputy Chief Minister of Maharashtra"
+            image={cmImage3}
+            bgColor="#FAEDED"
+          />
+        </div>
+
+        {/* Right Section */}
+        <div className="col-lg-6 col-md-12 col-xl-9 col-12">
+          <div className="carousel-image-slider">
+            <img
+              src={slides[currentSlide].src}
+              alt={slides[currentSlide].alt}
+              className="img-fluid rounded"
+            />
+            <div className="dot-container mt-2">
+              {slides.map((slide, index) => (
+                <span
+                  key={slide.id}
+                  className={`dot ${currentSlide === index ? "active" : ""}`}
+                  onClick={() => handleSlideChange(index)}
+                ></span>
+              ))}
             </div>
-          ))}
-        </Slider>
-        <div className="owl-nav">
-          <button type="button" className="owl-prev" onClick={goToPrev}>
-            <GrPrevious className="nav-icon" size={16} />
-          </button>
-          <button type="button" className="owl-next" onClick={goToNext}>
-            <GrNext className="nav-icon" size={16} />
-          </button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Corousel;
+const ProfileCard = ({ name, position, image, bgColor }) => {
+  return (
+    <div className='custom-profile-card' style={{ backgroundColor: bgColor }}>
+      <div className="d-flex align-items-center">
+        <img
+          src={image}
+          alt={name}
+          className="me-3 image"
+        />
+        <div>
+          <h6 className="mb-0">{name}</h6>
+          <p className="mb-0 text-muted small">{position}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
