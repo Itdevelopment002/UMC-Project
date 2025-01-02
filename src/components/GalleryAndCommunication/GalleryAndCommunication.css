@@ -1,7 +1,42 @@
+
 .image-style-2 {
   height: 125px;
   width: 100%;
   object-fit: cover;
+}
+.citigen {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.vertical-line {
+  position: relative;
+  height: 70px;
+  margin-right: 10px;
+}
+ .vertical-line::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 19px;
+  bottom: 22px;
+  width: 4px;
+  background: linear-gradient(to bottom, #F1A74E 0%, #7B202A 100%);
+}
+ .section-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Inter";
+  margin: 0;
+}
+ .subtitle {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 400;
 }
 
 .font-fam {
