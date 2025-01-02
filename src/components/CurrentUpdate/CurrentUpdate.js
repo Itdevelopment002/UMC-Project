@@ -62,12 +62,13 @@ const CurrentUpdate = () => {
           >
             {manualUpdates.concat(manualUpdates).map((item, index) => (
               <div className="marquee-item" key={index}>
-                <span style={{ color: "#FFAF50" }}>
-                  {(index % manualUpdates.length) + 1}.{" "}
-                </span>
+                <span className="circle"></span>
                 {item.description}
               </div>
             ))}
+
+
+
           </div>
         </div>
       </div>

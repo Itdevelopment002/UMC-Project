@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import slide1 from "../../assets/images/banner/Slider new.png";
-import slide2 from "../../assets/images/banner/Slider new.png";
-import slide3 from "../../assets/images/banner/Slider new.png";
-import slide4 from "../../assets/images/banner/Slider new.png";
-import cmImage1 from "../../assets/images/banner/current-CM.png";
-import cmImage2 from "../../assets/images/banner/Prev-CM.png";
-import cmImage3 from "../../assets/images/banner/UP_CM.png";
+import slide1 from "../../assets/images/banner/DSC08661 1.png";
+import slide2 from "../../assets/images/banner/DSC08661 1.png";
+import slide3 from "../../assets/images/banner/DSC08661 1.png";
+import slide4 from "../../assets/images/banner/DSC08661 1.png";
+import cmImage1 from "../../assets/images/banner/cm 1 (1).png";
+import cmImage2 from "../../assets/images/banner/dcm1 1.png";
+import cmImage3 from "../../assets/images/banner/dcm2 1.png";
 
 const App = () => {
   const slides = [
@@ -18,14 +18,24 @@ const App = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Function to change the slide
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
 
+  // Automatically change slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length); // Loop through slides
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [slides.length]);
+
   return (
     <div className="container-fluid">
       <div className="row home-carousel-section">
-        <div className="col-lg-6 col-md-12 col-xl-3 col-12 custom-profile-card1 ">
+        <div className=" col-md-12 col-lg-4 col-xl-4 col-xxl-3 col-12 custom-profile-card1 ">
           <ProfileCard
             name="Shri. Devendra Fadnavis"
             position="Hon'ble Chief Minister of Maharashtra"
@@ -47,24 +57,26 @@ const App = () => {
         </div>
 
         {/* Right Section */}
-        <div className="col-lg-6 col-md-12 col-xl-9 col-12">
-          <div className="carousel-image-slider">
-            <img
-              src={slides[currentSlide].src}
-              alt={slides[currentSlide].alt}
-              className="img-fluid rounded"
-            />
-            <div className="dot-container mt-2">
-              {slides.map((slide, index) => (
-                <span
-                  key={slide.id}
-                  className={`dot ${currentSlide === index ? "active" : ""}`}
-                  onClick={() => handleSlideChange(index)}
-                ></span>
-              ))}
-            </div>
-          </div>
+        <div className="col-md-12 col-lg-8 col-xl-8 col-xxl-9 col-12">
+      <div className="carousel-image-slider position-relative">
+        <img
+          src={slides[currentSlide].src}
+          alt={slides[currentSlide].alt}
+          className="img-fluid rounded"
+        />
+        <div className="dot-container">
+          {slides.map((slide, index) => (
+            <span
+              key={slide.id}
+              className={`dot ${currentSlide === index ? "active" : ""}`}
+              onClick={() => handleSlideChange(index)}
+            ></span>
+          ))}
         </div>
+      </div>
+    </div>
+
+
       </div>
     </div>
   );
@@ -80,8 +92,8 @@ const ProfileCard = ({ name, position, image, bgColor }) => {
           className="me-3 image"
         />
         <div>
-          <h6 className="mb-0">{name}</h6>
-          <p className="mb-0 text-muted small">{position}</p>
+          <h6 className="mb-0 name-color">{name}</h6>
+          <p className="mb-0 text-muted small position-custom">{position}</p>
         </div>
       </div>
     </div>

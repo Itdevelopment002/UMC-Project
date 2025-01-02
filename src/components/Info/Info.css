@@ -5,23 +5,28 @@
   margin-bottom: 15px;
 }
 
+.welcome-section .heading{
+  border-left: 5px solid #F37F1B;
+}
+
 .info-heading1 {
   color: #000;
-  font-size: 31px;
+  font-size: 35px;
   font-weight: 400;
-  font-family: "Inter";
+  font-family: "Roboto";
   margin-bottom: 15px;
+  padding-left: 15px;
 }
 
 .info-heading2 {
-  color: #C45896;
+  color: #F37F1A;
   font-size: 30px;
-  font-family: "Inter";
+  font-family: "Roboto";
 }
 
 .description {
   font-size: 16px;
-  font-family: "Inter";
+  font-family: "Roboto";
   line-height: 1.7;
   color: #242930;
   word-spacing: 0.1rem;
@@ -32,7 +37,7 @@
   color: #3D70D0 !important;
   font-size: 17px !important;
   font-weight: 700 !important;
-  font-family: "Inter" !important;
+  font-family: "Roboto" !important;
   text-decoration: none !important;
   margin-top: 50px !important;
 }
@@ -110,8 +115,8 @@
   width: 150px;
   height: 180px;
   border-radius: 20px;
-  border-left: 5px solid #8ABF4D;
-  border-bottom: 5px solid #8ABF4D;
+  border-left: 5px solid #F37F1A;
+  border-bottom: 5px solid #F37F1A;
   object-fit: cover;
   box-shadow: 5px -5px 10px rgba(83, 83, 83, 0.1);
 }
@@ -119,18 +124,22 @@
 
 /* Name Styling */
 .custom-name {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #D2263E;
+  color: #F37F1A;
   margin-top: 15px;
+  font-family: Roboto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a blackish shadow */
 }
+
 
 /* Title Styling */
 .custom-title {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
-  margin: 2px 0;
+  font-family: Roboto;
+  margin: -3px 0px 1px 0px;
 }
 
 /* Organization Styling */
@@ -138,6 +147,8 @@
   font-size: 0.9rem;
   color: #212121;
   margin-top: 5px;
+  font-family: Roboto;
+
 }
 
 /* @media (max-width: 786px) {
@@ -171,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
+  width: 50px;
   height: 40px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -191,7 +202,7 @@
 }
 
 #info-section .button-label {
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -226,5 +237,17 @@
 
   #info-section {
     margin-top: 30px;
+  }
+
+
+}
+
+
+@media (min-width:992px) and (max-width: 1200px) {
+  #info-section .button-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    text-align: left;
   }
 }
