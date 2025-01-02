@@ -1,9 +1,9 @@
 import React from 'react';
-import './AboutPage.css';
+import './History.css';
 import video1 from "../../assets/images/info/Group 14.png";
 import playicon from "../../assets/images/info/Group 15.png";
 import BottomSlider from "../BottomSlider/BottomSlider";
-const AboutPage = () => {
+const History = () => {
   return (
     <div className='about' id='about-section'>
       <div className="header-image">
@@ -12,7 +12,6 @@ const AboutPage = () => {
 
       <div className="container-fluid mt-5">
         <div className="row mt-4">
-          {/* Video Section */}
           <div className="col-md-4">
             <div className="video-wrapper position-relative">
               <img
@@ -72,4 +71,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default History;
