@@ -1,73 +1,124 @@
 import React from 'react';
 import './History.css';
-import video1 from "../../assets/images/info/Group 14.png";
+import historyimage1 from "../../assets/images/about/Walking-1_d 2.png";
 import playicon from "../../assets/images/info/Group 15.png";
 import BottomSlider from "../BottomSlider/BottomSlider";
+import { Link } from 'react-router-dom';
 const History = () => {
+
+  const menuItems = [
+    "Citizens' Charters",
+    "Corporators",
+    "Submit Tenders",
+    "Quotations",
+    "Budget",
+    "Department",
+    "Ward Offices",
+    "Circulars",
+  ];
+
   return (
-    <div className='about' id='about-section'>
-      <div className="header-image">
-
+    <>
+      <div className="history-header-image">
       </div>
 
-      <div className="container-fluid mt-5">
-        <div className="row mt-4">
-          <div className="col-md-4">
-            <div className="video-wrapper position-relative">
+      <div className="container-fluid font-location mt-2 mb-5" id= 'history-css'>
+        <nav className="breadcrumb">
+          <Link to="/" className="breadcrumb-item text-decoration-none">
+            Home
+          </Link>
+          <Link to="#" className="breadcrumb-item text-decoration-none">
+            About UMC
+          </Link>
+          <span className="breadcrumb-item active1">Location</span>
+        </nav>
+
+
+
+        <div className="row mt-5">
+          {/* Sidebar Section */}
+          <div className="col-lg-3 col-md-4 col-sm-12 col-12 sidebar">
+            {/* Sidebar Image */}
+            <div className="sidebar-image text-center">
               <img
-                src={video1}
-                alt="Ulhasnagar Municipal Corporation"
-                className="img-fluid rounded"
+                src={historyimage1}
+                alt="UMC Building"
+                className="img-fluid"
               />
-              <button className="btn play-button position-absolute">
-                <img src={playicon} alt="Play Icon" className="playicon" />
-              </button>
+            </div>
+            <div className="col-lg-12 col-sm-12 col-12">
+              <ul className="list-group list-group-styling">
+                {menuItems.map((item, index) => (
+                  <li className="list-group-item custom-list-item" key={index}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          {/* Content Section */}
+          <div className="col-lg-9 col-md-8 col-sm-12 col-12 content">
+            <div className="history-section">
+              <h2 className="history-title">
+                <span className="highlight">History</span>
+                <span className="highlighted-text"> of UMC</span>
+              </h2>
+              <p>
+                Ulhasnagar is a municipal town and the headquarters of the Tahsil
+                bearing the same name. It is a railway station on the Mumbai-Pune
+                route of the Central Railway. Ulhasnagar, a colony of migrants in
+                the aftermath of Partition, is 43 years old. Situated 58 Kms from
+                Mumbai, the once-barren land has developed into a rich town of
+                Thane district. Originally known as Kalyan Military transit camp,
+                Ulhasnagar was set up especially to accommodate 6,000 soldiers
+                and 30,000 others during World War II. There were 2,126 barracks
+                and about 1,173 housed personals.
+              </p>
+              <br />
+              <p>
+                The majority of barracks had large central halls with rooms
+                attached to either end. The camp had a deserted look at the end
+                of the war and served as a ready and ideal ground for Partition
+                victims. Sindhis, in particular, began life anew in the new land.
+              </p>
+              <br />
+              <p>
+                On August 8, 1949 the first and last Governor-General of India,
+                C. Rajagopalachari, laid the foundation stone. The population of
+                the town which was 80,861 as per the Census of 1961 and more than
+                doubled to 1,68,462 as per the Census of 1971. As per Census of
+                2001 it is 4,72,943. Included in the functional category of
+                industry, the town covers an area of 13 square kilometers and is
+                divided into 285 blocks. It is a centre for the production of
+                rayon silk, dyes, ready-made garments, electrical/electronic
+                appliances & confectionaries. The total length of existing Roads
+                & Streets in the town measures 352 kilometers.
+              </p>
+              <br />
+              <p>
+                The town is served by underground & open-surface drainage, night
+                soil being disposed of by septic tank latrines. The town gets a
+                protected water supply through MIDC. Sanctioned Water Quota at
+                various tapping points is 112 MLD. Fire-fighting service is also
+                available in the town. 60 private hospitals with a total
+                bed-strength of 840 beds 3 Government hospitals with total
+                bed-strength of 356 beds, 255 dispensaries/clinics, 100 RMP and a
+                family planning centre cater to the curative and preventive
+                health needs of the town population. Educational facilities are
+                provided by 129 primary schools, 56 Secondary Schools, 9 Higher
+                Secondary schools, 3 colleges and 2 Technical Colleges.
+                Entertainment facilities are provided by one stadium and nine
+                cinema theatres besides five auditorium-cum-drama halls. Nine
+                Public Libraries are located in the town.
+              </p>
             </div>
           </div>
-
-          <div className="col-md-8">
-            <div class="about-container">
-              <div class="vertical-line"></div>
-              <div>
-                <h2 class="section-title">About</h2>
-                <h3 class="subtitle">Ulhasnagar Municipal Corporation</h3>
-              </div>
-            </div>
-            <p className='about-description'>
-              Ulhasnagar is a municipal town and the headquarters of the Tahsil bearing
-              the same name. It is a railway station on the Mumbai-Pune route of the
-              Central Railway. Ulhasnagar, a colony of migrants in the aftermath of
-              Partition, is 43 years old. Situated 58 Kms from Mumbai, the once-barren
-              land has developed into a rich town of Thane district. Originally, known as
-              Kalyan Military transit camp, Ulhasnagar was set up especially to
-              accommodate 6,000 soldiers and 30,000 others during World War II. There
-              were 2,126 barracks and about 1,173 housed personals.
-            </p>
-
-          </div>
-
-
         </div>
 
-        {/* Additional Content */}
-        <div className="row mt-4">
-          <div className="col-12">
-            <p className='about-description'>
-              The majority of barracks had large central halls with rooms attached to
-              either end. The camp had a deserted look at the end of the war and served
-              as a ready and ideal ground for Partition victims. Sindhis, in particular,
-              began life anew in the new land.
-            </p>
-            <p className='about-description'>
-              On August 8, 1949 the first and last Governor-General of India, C.  Rajagopalachari, laid the foundation stone.  The population of the town which was 80,861 as per the Census of 1961  and more than doubled to 1,68,462 as per the Census of 1971.  As per Census of 2011 it is 5,06,098. Included in the functional  category of industry, the town covers an area of 13 square kilometers  and is divided into 20 wards.  It is a centre for the production of rayon silk, dyes, ready-made  garments, electrical / electronic appliances & confectionaries.  The total length of existing Roads & Streets in the town measures  352 kilometers.
-            </p>
-            <p className='about-description'>
-              The town is served by underground & open-surface drainage, night soil being disposed of by septic tank latrines.  The town gets a protected water supply through MIDC.</p>
-          </div>
-        </div>
       </div>
-      <BottomSlider />
-    </div>
+    </>
   );
 };
 
