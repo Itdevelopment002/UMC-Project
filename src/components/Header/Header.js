@@ -25,6 +25,7 @@ import AdministrativeWardsPDF from '../../assets/pdfs/Administrative_Wards.pdf';
 const Navbar = () => {
     const [selectedLanguage, setSelectedLanguage] = useState("eng");
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+    const [activeLink, setActiveLink] = useState("Home");
 
     const toggleNav = () => {
         setIsNavCollapsed(!isNavCollapsed);
@@ -71,11 +72,11 @@ const Navbar = () => {
         }
     };
 
-    const [activeLink, setActiveLink] = useState("Home");
 
     const handleNavClick = (linkName) => {
         setActiveLink(linkName);
     };
+
 
     return (
         <div className="navbar-container">
@@ -86,7 +87,7 @@ const Navbar = () => {
                     Helpline No: 0251 2720150
                 </div>
                 <div className="accessibility ">
-                    <Link to="/desired-page">
+                    <Link to="/rts-act-2015">
                         <button className="rts-act-button">RTS Act 2015</button>
                     </Link>
                     <span>Skip to main content</span>
@@ -216,48 +217,71 @@ const Navbar = () => {
                             </li>
 
                             <span className="nav-divider"></span>
-                            <li
-                                className={`nav-item dropdown ${activeLink === "About UMC" ? "active" : ""}`}
-                            >
+
+                            <li className={`nav-item dropdown ${activeLink === "About UMC" ? "active" : ""}`}>
                                 <Link
                                     to="#"
-                                    className={`nav-link dropdown-toggle d-flex align-items-center ${activeLink === "About UMC" ? "active" : ""}`}
+                                    className={`nav-link dropdown-toggle d-flex align-items-center ${activeLink === "About UMC" ? "active" : ""
+                                        }`}
                                     onClick={() => handleNavClick("About UMC")}
                                     id="aboutUMCDropdown"
                                     role="button"
                                     aria-expanded="false"
                                 >
-                                    <span className="me-1">About UMC</span> {/* Add margin space */}
-                                    <i className="dropdown-icon"></i> {/* Optional icon */}
+                                    <span className="me-1">About UMC</span>
+                                    <i className="dropdown-icon"></i>
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="aboutUMCDropdown">
                                     <li>
-                                        <Link to="/location" className="dropdown-item">
+                                        <Link
+                                            to="/location"
+                                            className={`dropdown-item ${activeLink === "Location" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Location")}
+                                        >
                                             Location
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/commissioner" className="dropdown-item">
+                                        <Link
+                                            to="/commissioner"
+                                            className={`dropdown-item ${activeLink === "Commissioner" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Commissioner")}
+                                        >
                                             Commissioner
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/history" className="dropdown-item">
+                                        <Link
+                                            to="/history"
+                                            className={`dropdown-item ${activeLink === "History" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("History")}
+                                        >
                                             History
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/recruitment" className="dropdown-item">
+                                        <Link
+                                            to="/recruitment"
+                                            className={`dropdown-item ${activeLink === "Recruitment" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Recruitment")}
+                                        >
                                             Recruitment
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Tourism" className="dropdown-item">
+                                        <Link
+                                            to="#Tourism"
+                                            className={`dropdown-item ${activeLink === "Tourism" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Tourism")}
+                                        >
                                             Tourism
                                         </Link>
                                     </li>
                                 </ul>
                             </li>
+
+
+
 
                             <span className="nav-divider"></span>
 
@@ -279,9 +303,10 @@ const Navbar = () => {
                                     <li>
                                         <Link
                                             to="#"
-                                            className="dropdown-item"
+                                            className={`dropdown-item ${activeLink === "Administrative Structure" ? "active" : ""}`}
                                             onClick={(e) => {
                                                 e.preventDefault();
+                                                handleNavClick("Administrative Structure");
                                                 openPDF(AdministrativeStructurePDF);
                                             }}
                                         >
@@ -291,27 +316,16 @@ const Navbar = () => {
                                     <li>
                                         <Link
                                             to="#"
-                                            className="dropdown-item"
+                                            className={`dropdown-item ${activeLink === "Administrative Ward" ? "active" : ""}`}
                                             onClick={(e) => {
                                                 e.preventDefault();
+                                                handleNavClick("Administrative Ward");
                                                 openPDF(AdministrativeWardsPDF);
                                             }}
                                         >
                                             Administrative Ward
                                         </Link>
                                     </li>
-                                    {/* <li>
-                                        <Link
-                                            to="#"
-                                            className="dropdown-item"
-                                        // onClick={(e) => {
-                                        //     e.preventDefault();
-                                        //     openPDF(CommissionerOfficePDF);
-                                        // }}
-                                        >
-                                            Commissioner Office
-                                        </Link>
-                                    </li> */}
                                 </ul>
                             </li>
 
@@ -334,42 +348,64 @@ const Navbar = () => {
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="CorporationDropdown">
                                     <li>
-                                        <Link to="#UMC Authorities" className="dropdown-item">
+                                        <Link to="#UMC Authorities"
+                                            className={`dropdown-item ${activeLink === "UMC Authorities" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("UMC Authorities")}
+                                        >
                                             UMC Authorities
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Mayor Office" className="dropdown-item">
+                                        <Link to="#Mayor Office"
+                                            className={`dropdown-item ${activeLink === "Mayor Office" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Mayor Office")}
+                                        >
                                             Mayor Office
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Dy. Mayor Office" className="dropdown-item">
+                                        <Link to="#Dy. Mayor Office"
+                                            className={`dropdown-item ${activeLink === "Dy. Mayor Office" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Dy. Mayor Office")}                                        >
                                             Dy. Mayor Office
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Standing Committee" className="dropdown-item">
+                                        <Link to="#Standing Committee"
+                                            className={`dropdown-item ${activeLink === "Standing Committee" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Standing Committee")}
+                                        >
                                             Standing Committee
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Ward Committee" className="dropdown-item">
+                                        <Link to="#Ward Committee"
+                                            className={`dropdown-item ${activeLink === "Ward Committee" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Ward Committee")}
+                                        >
                                             Ward Committee
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Subject Committee" className="dropdown-item">
+                                        <Link to="#Subject Committee"
+                                            className={`dropdown-item ${activeLink === "Subject Committee" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Subject Committee")}
+                                        >
                                             Subject Committee
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Quotations" className="dropdown-item">
+                                        <Link to="#Quotations"
+                                            className={`dropdown-item ${activeLink === "Quotations" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Quotations")}                                        >
                                             Quotations
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Municipal Meetings" className="dropdown-item">
+                                        <Link to="#Municipal Meetings"
+                                            className={`dropdown-item ${activeLink === "Municipal Meetings" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Municipal Meetings")}
+                                        >
                                             Municipal Meetings
                                         </Link>
                                     </li>
@@ -394,27 +430,42 @@ const Navbar = () => {
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="DepartmentsDropdown">
                                     <li>
-                                        <Link to="Computer / IT" className="dropdown-item">
+                                        <Link to="Computer / IT"
+                                            className={`dropdown-item ${activeLink === "Computer / IT" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Computer / IT")}
+                                        >
                                             Computer / IT
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Accounts Department" className="dropdown-item">
+                                        <Link to="#Accounts Department"
+                                            className={`dropdown-item ${activeLink === "Accounts Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Accounts Department")}
+                                        >
                                             Accounts Department
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Audit Department" className="dropdown-item">
+                                        <Link to="#Audit Department"
+                                            className={`dropdown-item ${activeLink === "Audit Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Audit Department")}
+                                        >
                                             Audit Department
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Vehicle Department" className="dropdown-item">
+                                        <Link to="#Vehicle Department"
+                                            className={`dropdown-item ${activeLink === "Vehicle Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Vehicle Department")}
+                                        >
                                             Vehicle Department
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#NULM" className="dropdown-item">
+                                        <Link to="#NULM"
+                                            className={`dropdown-item ${activeLink === "NULM" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("NULM")}
+                                        >
                                             NULM
                                         </Link>
                                     </li>
@@ -456,22 +507,33 @@ const Navbar = () => {
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="OnlineServicesDropdown">
                                     <li>
-                                        <Link to="#Property Tax" className="dropdown-item">
+                                        <Link to="#Property Tax"
+                                            className={`dropdown-item ${activeLink === "Property Tax" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Property Tax")}
+                                        >
                                             Property Tax
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Birth Certificate" className="dropdown-item">
+                                        <Link to="#Birth Certificate"
+                                            className={`dropdown-item ${activeLink === "Birth Certificate" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Birth Certificate")}
+                                        >
                                             Birth Certificate
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Death Certificate" className="dropdown-item">
+                                        <Link to="#Death Certificate"
+                                            className={`dropdown-item ${activeLink === "Death Certificate" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Death Certificate")}
+                                        >
                                             Death Certificate
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#e-Tender" className="dropdown-item">
+                                        <Link to="#e-Tender"
+                                            className={`dropdown-item ${activeLink === "e-Tender" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("e-Tender")}                                        >
                                             e-Tender
                                         </Link>
                                     </li>
@@ -496,19 +558,44 @@ const Navbar = () => {
                             </li>
 
                             <span className="nav-divider"></span>
-
                             <li
-                                className={`nav-item ${activeLink === "Gallery" ? "active" : ""
-                                    }`}
+                                className={`nav-item dropdown ${activeLink === "Gallery" ? "active" : ""}`}
                             >
                                 <Link
-                                    to="#."
-                                    className={`nav-link px-3 ${activeLink === "Gallery" ? "active" : ""
-                                        }`}
+                                    to="#"
+                                    className={`nav-link dropdown-toggle d-flex align-items-center ${activeLink === "Gallery" ? "active" : ""}`}
                                     onClick={() => handleNavClick("Gallery")}
+                                    id="galleryDropdown"
+                                    role="button"
+                                    aria-expanded="false"
                                 >
-                                    Gallery
+                                    <span className="me-1">Gallery</span>
+                                    <i className="dropdown-icon"></i>
                                 </Link>
+                                <ul className="dropdown-menu" aria-labelledby="galleryDropdown">
+                                    <li>
+                                        <Link
+                                            to="/photo-gallary"
+                                            className={`dropdown-item ${activeLink === "Photo Gallery" ? "active" : ""}`}
+                                            onClick={(e) => {
+                                                handleNavClick("Photo Gallery");
+                                            }}
+                                        >
+                                            Photo Gallery
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="#"
+                                            className={`dropdown-item ${activeLink === "Video Gallery" ? "active" : ""}`}
+                                            onClick={(e) => {
+                                                handleNavClick("Video Gallery");
+                                            }}
+                                        >
+                                            Video Gallery
+                                        </Link>
+                                    </li>
+                                </ul>
                             </li>
 
                             <span className="nav-divider"></span>

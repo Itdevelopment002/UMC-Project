@@ -10,6 +10,7 @@ import StickyFeedback from "./components/StickyFeedback/StickyFeedback";
 import Location from "./components/Location/Location";
 import BottomSlider from "./components/BottomSlider/BottomSlider";
 import Commissioner from "./components/Commissioner/Commissioner";
+import RTS from "./components/RTS/RTS";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Recruitment from "./components/Recruitment/Recruitment";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/history" element={<History />} />
         <Route path="/location" element={<Location />} />
         <Route path="/commissioner" element={<Commissioner />} />
+        <Route path="/rts-act-2015" element={<RTS />} />
         <Route path="/photo-gallery" element={<PhotoGallery />} />
         <Route path="/recruitment" element={<Recruitment />} />
       </Routes>
