@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import phoneicon from "../../assets/images/header-img/telephone.png";
 import flag1 from "../../assets/images/header-img/united-states.png";
 import flag2 from "../../assets/images/header-img/india.png";
@@ -18,7 +18,9 @@ import twitter from '../../assets/images/header-img/twitter.png';
 import facebook from '../../assets/images/header-img/facebook.png';
 import instagram from '../../assets/images/header-img/instagram (2).png';
 import youtube from '../../assets/images/header-img/Youtube.png';
-
+import AdministrativeStructurePDF from '../../assets/pdfs/Administrative_Structure.pdf';
+import AdministrativeWardsPDF from '../../assets/pdfs/Administrative_Wards.pdf';
+// import CommissionerOfficePDF from '../../assets/pdfs/Commissioner_Office.pdf';
 
 const Navbar = () => {
     const [selectedLanguage, setSelectedLanguage] = useState("eng");
@@ -27,7 +29,9 @@ const Navbar = () => {
     const toggleNav = () => {
         setIsNavCollapsed(!isNavCollapsed);
     };
-
+    const openPDF = (pdfURL) => {
+        window.open(pdfURL, '_blank');
+    };
     useEffect(() => {
         if (
             !document.querySelector(
@@ -156,13 +160,15 @@ const Navbar = () => {
 
             {/* Logo and Banner */}
             <div className="banner d-flex justify-content-between py-2">
-                <div className="logo d-flex">
-                    <img src={Mainlogo} alt="Logo" className="logo-img" />
-                    <div className="mt-2">
-                        <h1 className="brand-name ">ULHASNAGAR MUNICIPAL CORPORATION</h1>
-                        {/* <p className="brand-subtitle">Municipal Corporation</p> */}
+                <Link to="/">
+                    <div className="logo d-flex">
+                        <img src={Mainlogo} alt="Logo" className="logo-img" />
+                        <div className="mt-2">
+                            <h1 className="brand-name">ULHASNAGAR MUNICIPAL CORPORATION</h1>
+                            {/* <p className="brand-subtitle">Municipal Corporation</p> */}
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className="banner-image">
                     <img src={Headlogo1} alt="Image1" className="banner-img1" />
                     <Link
@@ -231,7 +237,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Commissioner" className="dropdown-item">
+                                        <Link to="/commissioner" className="dropdown-item">
                                             Commissioner
                                         </Link>
                                     </li>
@@ -266,25 +272,46 @@ const Navbar = () => {
                                     role="button"
                                     aria-expanded="false"
                                 >
-                                    <span className="me-1">Administrative Wings</span> {/* Add margin space */}
-                                    <i className="dropdown-icon"></i> {/* Optional icon */}
+                                    <span className="me-1">Administrative Wings</span>
+                                    <i className="dropdown-icon"></i> 
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="administrativeWingsDropdown">
                                     <li>
-                                        <Link to="#Administrative Structure" className="dropdown-item">
+                                        <Link
+                                            to="#"
+                                            className="dropdown-item"
+                                            onClick={(e) => {
+                                                e.preventDefault(); 
+                                                openPDF(AdministrativeStructurePDF);
+                                            }}
+                                        >
                                             Administrative Structure
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Administrative Ward" className="dropdown-item">
+                                        <Link
+                                            to="#"
+                                            className="dropdown-item"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                openPDF(AdministrativeWardsPDF);
+                                            }}
+                                        >
                                             Administrative Ward
                                         </Link>
                                     </li>
-                                    <li>
-                                        <Link to="#Commissioner Office" className="dropdown-item">
+                                    {/* <li>
+                                        <Link
+                                            to="#"
+                                            className="dropdown-item"
+                                        // onClick={(e) => {
+                                        //     e.preventDefault();
+                                        //     openPDF(CommissionerOfficePDF);
+                                        // }}
+                                        >
                                             Commissioner Office
                                         </Link>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </li>
 

@@ -5,7 +5,7 @@
   margin-bottom: 15px;
 }
 
-.welcome-section .heading{
+.welcome-section .heading {
   border-left: 5px solid #F37F1B;
 }
 
@@ -129,7 +129,8 @@
   color: #F37F1A;
   margin-top: 15px;
   font-family: Roboto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a blackish shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Adds a blackish shadow */
 }
 
 
@@ -249,5 +250,20 @@
     font-weight: 500;
     display: flex;
     text-align: left;
+  }
+}
+
+@media (max-width: 1470px) {
+  .info-heading1 {
+
+    font-size: 27px;
+
+  }
+
+  .info-heading2{
+    font-size: 25px;
+  }
+  .description{
+    text-align: justify;
   }
 }
