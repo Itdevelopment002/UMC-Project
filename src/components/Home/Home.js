@@ -6,7 +6,6 @@ import EServices from "../EServices/EServices";
 import CitizenServices from "../CitizenServices/CitizenServices";
 import GalleryAndCommunication from "../GalleryAndCommunication/GalleryAndCommunication";
 import SocialMediaSection from "../SocialMediaSection/SocialMediaSection";
-import BottomSlider from "../BottomSlider/BottomSlider";
 
 const Home = () => {
   return (
@@ -19,7 +18,6 @@ const Home = () => {
       <CitizenServices />
       <GalleryAndCommunication />
       <SocialMediaSection />
-      <BottomSlider />
     
     </>
   );

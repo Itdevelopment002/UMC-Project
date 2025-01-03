@@ -159,7 +159,6 @@
 
 import React, { useState } from "react";
 import "./EServices.css";
-import { CiCircleCheck } from "react-icons/ci";
 import img from "../../assets/images/project/project.png";
 import tick from '../../assets/images/info/tick.png'
 

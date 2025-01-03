@@ -8,6 +8,7 @@ import History from "./components/History/History";
 import WhatsAppChat from "./components/WhatsAppChat/WhatsAppChat";
 import StickyFeedback from "./components/StickyFeedback/StickyFeedback"; // Import the StickyFeedback component
 import Location from "./components/Location/Location";
+import BottomSlider from "./components/BottomSlider/BottomSlider";
 import Commissioner from "./components/Commissioner/Commissioner";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/commissioner" element={<Commissioner />} />
       </Routes>
+      <BottomSlider />
       <WhatsAppChat />
       <Footer />
     </Router>
