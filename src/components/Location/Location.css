@@ -3,7 +3,7 @@
 }
 
 .breadcrumb {
-  background-color: #FFF7E2 !important;
+  background-color: #fff7e2 !important;
   padding: 10px 10px !important;
   border-radius: 5px !important;
   border: 1px solid #cbcbb5 !important;
@@ -29,36 +29,35 @@
 .location-title .highlight {
   color: #333333;
   font-weight: 700;
-  border-left: 5px solid #F37F1B;
+  border-left: 5px solid #f37f1b;
   padding-left: 8px;
 }
 
-.highlighted-text{
-    font-weight: 300;
+.highlighted-text {
+  font-weight: 300;
+}
+
+.list-group-styling{
+  border: 3px solid #C6CAB2; 
+  border-radius: 4px;
 }
 
 .list-group-item {
-  background-color: #FFF7E2 !important;
+  background-color: #fff7e2 !important;
   font-weight: 500 !important;
   border-radius: 0 !important;
   color: #000000 !important;
-  font-size: 20px !important;
+  font-size: 17px !important;
   letter-spacing: -2% !important;
 }
-
-.circle {
-    width: 7px !important;
-    height: 7px !important;
-    border-radius: 50% !important; /* Makes it a circle */
-    background-color: #545454 !important; /* Black color for the circle */
-    margin-right: 8px !important; /* Space between the circle and text */
-  }
 
 .list-group-item:hover {
   background-color: #fef2d3 !important;
   cursor: pointer;
 }
 
-.border {
-  border: 4px solid black !important;
+.location-styling {
+  border: 3px solid #c6cab2 !important;
+  border-radius: 4px !important;
+  padding: 0px !important;
 }

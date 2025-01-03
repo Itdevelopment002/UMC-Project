@@ -1,4 +1,5 @@
 .feedback-container {
+    font-family: "Roboto";
     position: fixed;
     top: 100px;
     right: -300px; /* Hidden by default */
@@ -18,20 +19,22 @@
     transform: translateY(-50%);
     width: 40px;
     height: 130px;
-    background-color: #FFAF50;
+    background-color: #F55179;
     color: white;
     writing-mode: vertical-rl;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
     border: 1px solid #e2dede;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
+    transform: translateY(-50%) rotate(180deg);
 }
+
 
 .feedback-panel {
     background-color: #EDEFF1;
