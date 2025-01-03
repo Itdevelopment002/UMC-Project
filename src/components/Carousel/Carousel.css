@@ -93,7 +93,7 @@
   }
   
   .custom-profile-card .image {
-    width: 90px !important;
+    width: 75px !important;
     height: 65px !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -121,7 +121,7 @@
   }
   
   .custom-profile-card .image {
-    width: 80px !important;
+    width: 70px !important;
     height: 60px !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;

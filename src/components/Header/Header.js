@@ -156,13 +156,15 @@ const Navbar = () => {
 
             {/* Logo and Banner */}
             <div className="banner d-flex justify-content-between py-2">
-                <div className="logo d-flex">
-                    <img src={Mainlogo} alt="Logo" className="logo-img" />
-                    <div className="mt-2">
-                        <h1 className="brand-name ">ULHASNAGAR MUNICIPAL CORPORATION</h1>
-                        {/* <p className="brand-subtitle">Municipal Corporation</p> */}
+                <Link to="/">
+                    <div className="logo d-flex">
+                        <img src={Mainlogo} alt="Logo" className="logo-img" />
+                        <div className="mt-2">
+                            <h1 className="brand-name">ULHASNAGAR MUNICIPAL CORPORATION</h1>
+                            {/* <p className="brand-subtitle">Municipal Corporation</p> */}
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className="banner-image">
                     <img src={Headlogo1} alt="Image1" className="banner-img1" />
                     <Link
