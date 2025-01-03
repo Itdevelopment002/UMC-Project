@@ -352,6 +352,11 @@ a {
     color: #000 !important;
 }
 
+.dropdown-item.active {
+    background-color: #FFF7E2 !important;
+    color: #000 !important;
+}
+
 
 /* Media Query Start */
 @media (min-width: 1153px) {
