@@ -30,22 +30,33 @@
 
 .rts-act-button {
     font-family: 'roboto';
-    background-color: #F37F1A;
-    color: white;
-    border: none;
-    padding: 3px 10px;
+    background-color: #F37F1A; 
+    color: white; 
+    border: none; 
+    padding: 3px 10px; 
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 13px; 
     font-weight: 500;
     margin-right: 10px;
-    cursor: pointer;
+    cursor: pointer; 
     transition: background-color 0.3s ease;
+    animation: pulse 2s infinite; 
 }
 
-.rts-act-button:hover {
-    background-color: #cc5200;
+.rts-act-button:hover{
+    background-color: #cc5200; 
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8); 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1); 
+        opacity: 1;
+    }
+}
 
 .accessibility {
     display: flex;
