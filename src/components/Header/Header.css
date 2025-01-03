@@ -39,13 +39,26 @@
     font-weight: 500;
     margin-right: 10px;
     cursor: pointer; 
-    transition: background-color 0.3s ease; 
-  }
-  
-  .rts-act-button:hover {
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite; /* Heart-pulse animation */
+}
+
+.rts-act-button:hover {
+    animation: none; /* Stops pulsing when hovered */
     background-color: #cc5200; 
-  }
-  
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8); /* Original size */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: scale(1); /* Slightly larger */
+        opacity: 1; /* Slightly transparent */
+    }
+}
+
 
 .accessibility {
     display: flex;
