@@ -575,7 +575,7 @@ const Navbar = () => {
                                 <ul className="dropdown-menu" aria-labelledby="galleryDropdown">
                                     <li>
                                         <Link
-                                            to="/photo-gallary"
+                                            to="/photo-gallery"
                                             className={`dropdown-item ${activeLink === "Photo Gallery" ? "active" : ""}`}
                                             onClick={(e) => {
                                                 handleNavClick("Photo Gallery");
@@ -586,7 +586,7 @@ const Navbar = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to="#"
+                                            to="/video-gallery"
                                             className={`dropdown-item ${activeLink === "Video Gallery" ? "active" : ""}`}
                                             onClick={(e) => {
                                                 handleNavClick("Video Gallery");
