@@ -58,7 +58,7 @@ const Location = () => {
   return (
     <>
       <div className="history-header-image"></div>
-      <div className="container-fluid font-location mt-4 mb-5" id="location">
+      <div className="container-fluid font-location mt-4 mb-5" id="location-css">
         <nav className="breadcrumb">
           <Link to="/" className="breadcrumb-item text-decoration-none">
             Home
