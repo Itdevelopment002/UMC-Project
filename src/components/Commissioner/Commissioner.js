@@ -35,7 +35,7 @@ const Commissioner = () => {
                     <Link to="#" className="breadcrumb-item text-decoration-none">
                         About UMC
                     </Link>
-                    <span className="breadcrumb-item active1">Location</span>
+                    <span className="breadcrumb-item active1">Commissioner</span>
                 </nav>
                 <h2 className="location-title">
                     <span className="highlight">Commissioner</span>
