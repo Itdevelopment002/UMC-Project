@@ -80,6 +80,12 @@
   padding: 0px !important;
 }
 
+@media (max-width: 1470px) {
+  .list-group-item {
+    font-size: 15px !important;
+  }
+}
+
 @media (max-width: 576px) {
   #location-css .location-styling {
     border: 2px solid #c6cab2 !important;
@@ -137,6 +143,9 @@
     padding: 20px;
   }
 }
+
+
+
 
 
 #location-css .text-orange {

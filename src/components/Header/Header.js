@@ -247,7 +247,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Recruitment" className="dropdown-item">
+                                        <Link to="/recruitment" className="dropdown-item">
                                             Recruitment
                                         </Link>
                                     </li>
@@ -273,7 +273,7 @@ const Navbar = () => {
                                     aria-expanded="false"
                                 >
                                     <span className="me-1">Administrative Wings</span>
-                                    <i className="dropdown-icon"></i> 
+                                    <i className="dropdown-icon"></i>
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="administrativeWingsDropdown">
                                     <li>
@@ -281,7 +281,7 @@ const Navbar = () => {
                                             to="#"
                                             className="dropdown-item"
                                             onClick={(e) => {
-                                                e.preventDefault(); 
+                                                e.preventDefault();
                                                 openPDF(AdministrativeStructurePDF);
                                             }}
                                         >

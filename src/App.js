@@ -11,6 +11,7 @@ import Location from "./components/Location/Location";
 import BottomSlider from "./components/BottomSlider/BottomSlider";
 import Commissioner from "./components/Commissioner/Commissioner";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
+import Recruitment from "./components/Recruitment/Recruitment";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/commissioner" element={<Commissioner />} />
         <Route path="/photo-gallery" element={<PhotoGallery />} />
+        <Route path="/recruitment" element={<Recruitment />} />
       </Routes>
       <BottomSlider />
       <WhatsAppChat />
