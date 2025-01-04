@@ -13,6 +13,8 @@ import Commissioner from "./components/Commissioner/Commissioner";
 import RTS from "./components/RTS/RTS";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Recruitment from "./components/Recruitment/Recruitment";
+import VideoGallery from "./components/VideoGallery/VideoGallery";
+import OnlineServices from "./components/OnlineServices/OnlineServices";
 
 function App() {
   return (
@@ -23,10 +25,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/history" element={<History />} />
         <Route path="/location" element={<Location />} />
-        <Route path="/commissioner" element={<Commissioner />} />
-        <Route path="/rts-act-2015" element={<RTS />} />
-        <Route path="/photo-gallery" element={<PhotoGallery />} />
         <Route path="/recruitment" element={<Recruitment />} />
+        <Route path="/commissioner" element={<Commissioner />} />
+        <Route path="/online-services" element={<OnlineServices />} />
+        <Route path="/photo-gallery" element={<PhotoGallery />} />
+        <Route path="/video-gallery" element={<VideoGallery />} />
+        <Route path="/rts-act-2015" element={<RTS />} />
       </Routes>
       <BottomSlider />
       <WhatsAppChat />

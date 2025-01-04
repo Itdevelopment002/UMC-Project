@@ -1,0 +1,102 @@
+#online-services-css .inter-font {
+  font-family: "Inter";
+}
+
+#online-services-css .roboto-font {
+  font-family: "Roboto";
+}
+
+#online-services-css .e-services-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e7daed;
+  border-radius: 32px;
+  height: 350px;
+}
+
+#online-services-css .custom-nav-border {
+  border-bottom: none !important;
+}
+
+#online-services-css .tabs-container {
+  background: linear-gradient(to right, #ec7026 0%, #f5507a 100%);
+  border-radius: 32px;
+  margin-bottom: 6px;
+}
+
+#online-services-css .tabs-container .nav-tabs .nav-link {
+  border: none !important;
+  outline: none !important;
+}
+
+#online-services-css .tabs-container .nav-tabs .nav-link.active {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.3) 75%
+  );
+  color: rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  text-shadow: 8px 8px 10px rgba(255, 255, 255, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.5),
+    2px -2px 4px rgba(255, 255, 255, 0.5), -2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 575.98px) {
+  #online-services-css .e-services-container {
+    border-radius: 16px;
+    margin-top: 20px;
+  }
+
+  #online-services-css .tabs-container {
+    margin-bottom: 4px;
+    border-radius: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #online-services-css .e-services-container {
+    border-radius: 24px;
+    margin-top: 20px;
+  }
+
+  #online-services-css .tabs-container {
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #online-services-css .tabs-container {
+    margin-bottom: 6px;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  #online-services-css .tabs-container {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 1168px) {
+  #online-services-css .e-services-container {
+    border-radius: 10px !important;
+    max-height: 325px;
+  }
+
+  #online-services-css .tabs-container {
+    border-radius: 10px !important;
+  }
+  #online-services-css .tabs-container .nav-tabs .nav-link.active {
+    border-radius: 10px !important;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 1106px) {
+  .tabs-container .nav-tabs .nav-link {
+    padding: 3px 5px 3px 5px !important;
+    outline: none !important;
+  }
+}

@@ -94,7 +94,7 @@ const CitizenServices = () => {
               <div className="vertical-line"></div>
               <div className="d-flex">
                 <h2 className="section-title">
-                  Video <span className="subtitle">Services</span>
+                  Video <span className="subtitle">Gallery</span>
                 </h2>
               </div>
             </div>
