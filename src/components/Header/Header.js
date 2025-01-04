@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import phoneicon from "../../assets/images/header-img/telephone.png";
 import flag1 from "../../assets/images/header-img/united-states.png";
 import flag2 from "../../assets/images/header-img/india.png";
@@ -429,8 +429,24 @@ const Navbar = () => {
                                     <i className="dropdown-icon"></i> {/* Optional icon */}
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="DepartmentsDropdown">
+                                <li>
+                                        <Link to="/disaster-management"
+                                            className={`dropdown-item ${activeLink === "Disaster Management" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Disaster Management")}
+                                        >
+                                            Disaster Management
+                                        </Link>
+                                    </li>
                                     <li>
-                                        <Link to="Computer / IT"
+                                        <Link to="/general-administration-dept"
+                                            className={`dropdown-item ${activeLink === "General Administration Dept" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("General Administration Dept")}
+                                        >
+                                            General Administration Dept
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/computer-it"
                                             className={`dropdown-item ${activeLink === "Computer / IT" ? "active" : ""}`}
                                             onClick={() => handleNavClick("Computer / IT")}
                                         >
@@ -438,7 +454,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Accounts Department"
+                                        <Link to="/accounts-department"
                                             className={`dropdown-item ${activeLink === "Accounts Department" ? "active" : ""}`}
                                             onClick={() => handleNavClick("Accounts Department")}
                                         >
@@ -446,7 +462,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Audit Department"
+                                        <Link to="/audit-department"
                                             className={`dropdown-item ${activeLink === "Audit Department" ? "active" : ""}`}
                                             onClick={() => handleNavClick("Audit Department")}
                                         >
@@ -454,11 +470,27 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="#Vehicle Department"
+                                        <Link to="/vehicle-epartment"
                                             className={`dropdown-item ${activeLink === "Vehicle Department" ? "active" : ""}`}
                                             onClick={() => handleNavClick("Vehicle Department")}
                                         >
                                             Vehicle Department
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/estate-department"
+                                            className={`dropdown-item ${activeLink === "Estate Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Estate Department")}
+                                        >
+                                            Estate Department
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/secretary-dept"
+                                            className={`dropdown-item ${activeLink === "Secretary Dept" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Secretary Dept")}
+                                        >
+                                            Secretary Dept
                                         </Link>
                                     </li>
                                     <li>
@@ -467,6 +499,38 @@ const Navbar = () => {
                                             onClick={() => handleNavClick("NULM")}
                                         >
                                             NULM
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/town-planning"
+                                            className={`dropdown-item ${activeLink === "Town Planning" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Town Planning")}
+                                        >
+                                            Town Planning
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/encroachment-department"
+                                            className={`dropdown-item ${activeLink === "Encroachment Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Encroachment Department")}
+                                        >
+                                            Encroachment Department
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/handicap-welfare-scheme"
+                                            className={`dropdown-item ${activeLink === "Handicap Welfare Scheme" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Handicap Welfare Scheme")}
+                                        >
+                                            Handicap Welfare Scheme
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/environment-department"
+                                            className={`dropdown-item ${activeLink === "Environment Department" ? "active" : ""}`}
+                                            onClick={() => handleNavClick("Environment Department")}
+                                        >
+                                            Environment Department
                                         </Link>
                                     </li>
                                 </ul>

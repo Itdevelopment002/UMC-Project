@@ -3,24 +3,24 @@ import { Link } from "react-router-dom";
 import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css";
 import "./PhotoGallery.css";
-import img1 from "../../assets/images/Gallery/Temples/temple1.png";
-import img2 from "../../assets/images/Gallery/Temples/temple2.png";
-import img3 from "../../assets/images/Gallery/Temples/temple3.png";
-import img4 from "../../assets/images/Gallery/Temples/temple4.png";
-import img5 from "../../assets/images/Gallery/Temples/temple5.png";
-import img6 from "../../assets/images/Gallery/Temples/temple6.png";
-import img7 from "../../assets/images/Gallery/Temples/temple7.png";
-import img8 from "../../assets/images/Gallery/Temples/temple8.png";
-import img9 from "../../assets/images/Gallery/Marathi/lang1.png";
-import img10 from "../../assets/images/Gallery/Marathi/lang2.png";
-import img11 from "../../assets/images/Gallery/Marathi/lang3.png";
-import img12 from "../../assets/images/Gallery/Marathi/lang4.png";
-import img13 from "../../assets/images/Gallery/Marathi/lang5.png";
-import img14 from "../../assets/images/Gallery/Marathi/lang6.png";
-import img15 from "../../assets/images/Gallery/Marathi/lang7.png";
-import img16 from "../../assets/images/Gallery/Marathi/lang8.png";
+import img1 from "../../assets/images/Gallery/PhotoGallery/Temples/temple1.png";
+import img2 from "../../assets/images/Gallery/PhotoGallery/Temples/temple2.png";
+import img3 from "../../assets/images/Gallery/PhotoGallery/Temples/temple3.png";
+import img4 from "../../assets/images/Gallery/PhotoGallery/Temples/temple4.png";
+import img5 from "../../assets/images/Gallery/PhotoGallery/Temples/temple5.png";
+import img6 from "../../assets/images/Gallery/PhotoGallery/Temples/temple6.png";
+import img7 from "../../assets/images/Gallery/PhotoGallery/Temples/temple7.png";
+import img8 from "../../assets/images/Gallery/PhotoGallery/Temples/temple8.png";
+import img9 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang1.png";
+import img10 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang2.png";
+import img11 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang3.png";
+import img12 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang4.png";
+import img13 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang5.png";
+import img14 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang6.png";
+import img15 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang7.png";
+import img16 from "../../assets/images/Gallery/PhotoGallery/Marathi/lang8.png";
 
-const Gallery = () => {
+const PhotoGallery = () => {
   const temples = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   const languages = [img9, img10, img11, img12, img13, img14, img15, img16];
@@ -33,7 +33,7 @@ const Gallery = () => {
     <>
       <div className="history-header-image"></div>
 
-      <div className="container-fluid font-location mt-2 mb-5" id="gallery-css">
+      <div className="container-fluid font-location mt-2 mb-5" id="photo-gallery-css">
         <nav className="breadcrumb">
           <Link to="/" className="breadcrumb-item text-decoration-none">
             Home
@@ -96,4 +96,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default PhotoGallery;
